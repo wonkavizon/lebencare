@@ -34,7 +34,7 @@
     }
 
     .logo-secondary {
-      height: 150px; /* increased ~60% */
+      height: 150px;
     }
 
     .banner-right a {
@@ -42,6 +42,7 @@
       font-weight: bold;
       font-size: 20px;
       text-decoration: none;
+      margin-left: 25px;
     }
 
     /* Mission Section */
@@ -139,19 +140,21 @@
 
 <body>
 
-  <!-- Banner with Two Logos + Right Link -->
+  <!-- Banner with Navigation -->
   <div class="banner">
     <div class="banner-left">
       <img src="logo.png" alt="Leben Care Logo">
-      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary"style="width: 200px; height: auto;">
+      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary" style="width: 200px; height: auto;">
     </div>
 
     <div class="banner-right">
-      <a href="#about">About Leben Care</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact Us</a>
     </div>
   </div>
 
-  <!-- Mission Section (logo removed) -->
+  <!-- Mission Section -->
   <div class="white-section" id="about">
     <p class="about-text">
       At Leben Care we provide accessible, compassionate healthcare services including Telehealth 
@@ -164,7 +167,7 @@
   <div class="content-area">
 
     <!-- Services -->
-    <section>
+    <section id="services">
       <h2>Available Services</h2>
 
       <h3>Telehealth Across Florida (No insurance required)</h3>
@@ -203,7 +206,7 @@
     </section>
 
     <!-- Contact -->
-    <section>
+    <section id="contact">
       <h2>Contact Us</h2>
       <form action="mailto:contactus@lebencare.com" method="POST" enctype="text/plain">
         <input type="text" name="Name" placeholder="Your Name" required />
