@@ -8,12 +8,13 @@
   <style>
     body {
       margin: 0;
+      padding-top: 120px;
       font-family: Arial, sans-serif;
       color: #333;
       line-height: 1.6;
     }
 
-    /* Banner Bar */
+    /* FIXED Banner Bar */
     .banner {
       background: white;
       display: flex;
@@ -21,6 +22,11 @@
       align-items: center;
       padding: 10px 30px;
       border-bottom: 2px solid #dcdcdc;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
     }
 
     .banner-left {
@@ -197,7 +203,7 @@
 
 <body>
 
-  <!-- Banner with Navigation -->
+  <!-- FIXED Banner -->
   <div class="banner">
     <div class="banner-left">
       <img src="logo.png" alt="Leben Care Logo">
@@ -205,7 +211,7 @@
     </div>
 
     <div class="banner-right">
-      <a href="#about">About</a>
+      <a href="about.html">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact Us</a>
     </div>
@@ -223,14 +229,11 @@
   <!-- Services + Contact -->
   <div class="content-area">
 
-    <!-- Services -->
     <section id="services">
       <h2>Our Services</h2>
 
-      <!-- Top Row: 3 Boxes -->
       <div class="service-grid">
 
-        <!-- BOX 1 -->
         <div class="service-box">
           <h3>Telehealth Across Florida</h3>
           <p style="margin: 5px 0 10px 0; font-weight: normal; font-size: 16px;">
@@ -245,7 +248,6 @@
           <a href="services.html#telehealth" class="learn-more-btn">Learn More</a>
         </div>
 
-        <!-- BOX 2 -->
         <div class="service-box">
           <h3>Self-Employee Primary Care Membership</h3>
           <div class="maroon-line"></div>
@@ -257,7 +259,6 @@
           <a href="services.html#membership" class="learn-more-btn">Learn More</a>
         </div>
 
-        <!-- BOX 3 -->
         <div class="service-box">
           <h3>Direct Primary Care Model</h3>
           <div class="maroon-line"></div>
@@ -270,10 +271,8 @@
 
       </div>
 
-      <!-- Bottom Row: 2 Boxes -->
       <div class="service-grid-bottom">
 
-        <!-- BOX 4 -->
         <div class="service-box-bottom">
           <h3>Corporate Wellness</h3>
           <div class="maroon-line"></div>
@@ -285,7 +284,6 @@
           <a href="services.html#corporate" class="learn-more-btn">Learn More</a>
         </div>
 
-        <!-- BOX 5 -->
         <div class="service-box-bottom">
           <h3>In-Office Services</h3>
           <div class="maroon-line"></div>
@@ -301,7 +299,6 @@
 
     </section>
 
-    <!-- Contact -->
     <section id="contact">
       <h2>Contact Us</h2>
       <form action="mailto:contactus@lebencare.com" method="POST" enctype="text/plain">
