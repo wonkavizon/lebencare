@@ -20,7 +20,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 30px;
+      padding: 10px 20px;
       border-bottom: 2px solid #dcdcdc;
       position: fixed;
       top: 0;
@@ -32,15 +32,21 @@
     .banner-left {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 10px;
     }
 
     .banner-left img {
-      height: 70px;
+      height: 60px;
     }
 
     .logo-secondary {
-      height: 150px;
+      height: 120px;
+    }
+
+    .banner-right {
+      display: flex;
+      gap: 20px;
+      white-space: nowrap;
     }
 
     .banner-right a {
@@ -48,19 +54,17 @@
       font-weight: bold;
       font-size: 20px;
       text-decoration: none;
-      margin-left: 25px;
     }
 
     /* Mission Section */
     .white-section {
       background: white;
-      padding: 15px 20px;
+      padding: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
       max-width: 1200px;
       margin: auto;
-      gap: 40px;
     }
 
     .about-text {
@@ -110,28 +114,11 @@
       min-height: 150px;
     }
 
-    .service-box h3,
-    .service-box-bottom h3 {
-      margin: 0;
-      font-size: 20px;
-      color: #0d2a57;
-    }
-
     .maroon-line {
       width: 60%;
       height: 2px;
       background: #800000;
       margin: 10px auto 15px auto;
-    }
-
-    .service-box ul,
-    .service-box-bottom ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 1.4;
     }
 
     .learn-more-btn {
@@ -145,10 +132,6 @@
       font-size: 14px;
       text-decoration: none;
       font-weight: bold;
-    }
-
-    .learn-more-btn:hover {
-      background: #f2f2f2;
     }
 
     .service-grid-bottom {
@@ -196,10 +179,6 @@
       font-weight: bold;
     }
 
-    button:hover {
-      background: #143b7d;
-    }
-
     #confirmationMessage {
       text-align: center;
       margin-top: 20px;
@@ -216,6 +195,66 @@
       font-size: 14px;
       color: #ffffffcc;
     }
+
+    /* MOBILE RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+
+      body {
+        padding-top: 160px;
+      }
+
+      .banner {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .banner-left {
+        flex-direction: column;
+      }
+
+      .banner-left img {
+        height: 45px;
+      }
+
+      .logo-secondary {
+        height: 80px !important;
+      }
+
+      .banner-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      .banner-right a {
+        font-size: 18px;
+      }
+
+      .about-text {
+        font-size: 18px;
+        padding: 0 10px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid-bottom {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        max-width: 100%;
+        width: 90%;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
 
@@ -224,8 +263,8 @@
   <!-- FIXED Banner -->
   <div class="banner">
     <div class="banner-left">
-      <img src="logo.png" alt="Leben Care Logo">
-      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary" style="width: 200px; height: auto;">
+      <a href="index.html"><img src="logo.png" alt="Leben Care Logo"></a>
+      <a href="index.html"><img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary"></a>
     </div>
 
     <div class="banner-right">
@@ -244,7 +283,7 @@
     </p>
   </div>
 
-  <!-- SERVICES (unchanged) -->
+  <!-- SERVICES -->
   <div class="content-area">
     <section id="services">
       <h2>Our Services</h2>
@@ -252,10 +291,10 @@
       <div class="service-grid">
         <div class="service-box">
           <h3>Telehealth Across Florida</h3>
-          <p style="margin: 5px 0 10px 0; font-weight: normal; font-size: 16px;">(No insurance required)</p>
+          <p>(No insurance required)</p>
           <div class="maroon-line"></div>
           <ul>
-            <li>Sick Visits (Minor Infections)</li>
+            <li>Sick Visits</li>
             <li>Weight Loss</li>
             <li>Medication Refills</li>
           </ul>
@@ -266,9 +305,9 @@
           <h3>Self-Employee Primary Care Membership</h3>
           <div class="maroon-line"></div>
           <ul>
-            <li>Self Employee Business Owner</li>
-            <li>Freelancer</li>
-            <li>Contractor</li>
+            <li>Self-Employed</li>
+            <li>Freelancers</li>
+            <li>Contractors</li>
           </ul>
           <a href="services.html#membership" class="learn-more-btn">Learn More</a>
         </div>
@@ -278,7 +317,7 @@
           <div class="maroon-line"></div>
           <ul>
             <li>Flexible Access</li>
-            <li>Health Care & Preventions</li>
+            <li>Prevention & Wellness</li>
           </ul>
           <a href="services.html#dpc" class="learn-more-btn">Learn More</a>
         </div>
@@ -289,9 +328,9 @@
           <h3>Corporate Wellness</h3>
           <div class="maroon-line"></div>
           <ul>
-            <li>Health Coach</li>
-            <li>Pre-employment Physicals</li>
-            <li>Chronic Care Management</li>
+            <li>Health Coaching</li>
+            <li>Physicals</li>
+            <li>Chronic Care</li>
           </ul>
           <a href="services.html#corporate" class="learn-more-btn">Learn More</a>
         </div>
@@ -300,8 +339,8 @@
           <h3>In-Office Services</h3>
           <div class="maroon-line"></div>
           <ul>
-            <li>Primary Care - Routine Visits and Labs</li>
-            <li>IV Therapy & Injections</li>
+            <li>Primary Care</li>
+            <li>IV Therapy</li>
             <li>Aesthetic Wellness</li>
           </ul>
           <a href="services.html#office" class="learn-more-btn">Learn More</a>
@@ -310,7 +349,7 @@
     </section>
   </div>
 
-  <!-- NEW WHITE CONTACT SECTION -->
+  <!-- CONTACT SECTION -->
   <div class="contact-section" id="contact">
     <h2>Contact Us</h2>
 
