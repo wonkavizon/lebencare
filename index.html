@@ -9,33 +9,110 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             color: #333;
+            line-height: 1.6;
         }
 
-        header {
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
             background: #2a7de1;
             color: white;
+        }
+
+        .header .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Hero */
+        .hero {
+            background: #e8f1fc;
             padding: 80px 20px;
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 42px;
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
         }
 
-        header p {
-            margin-top: 10px;
+        .hero p {
             font-size: 20px;
+            margin-bottom: 20px;
         }
 
+        /* Sections */
         section {
-            padding: 40px 20px;
+            padding: 50px 20px;
             max-width: 900px;
             margin: auto;
         }
 
+        h2 {
+            color: #2a7de1;
+            margin-bottom: 10px;
+        }
+
+        .services-group {
+            margin-bottom: 30px;
+        }
+
+        .services-group h3 {
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .services-group ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services-group li {
+            background: #f4f4f4;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px;
+            background: #2a7de1;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1f5fa8;
+        }
+
+        /* Footer */
         footer {
             background: #f2f2f2;
             padding: 20px;
@@ -48,22 +125,86 @@
 
 <body>
 
-    <header>
-        <h1>Lebencare</h1>
-        <p>Quality care. Compassionate service.</p>
-    </header>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">Lebencare</div>
+        <a href="#about">About Us</a>
+    </div>
 
-    <section>
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Lebencare</h1>
+        <p>Telehealth, Primary Care, and Wellness Services Across Florida</p>
+    </div>
+
+    <!-- About -->
+    <section id="about">
         <h2>About Us</h2>
         <p>
-            Lebencare is committed to providing reliable, compassionate support for individuals and families.
-            This is a placeholder page — content will be expanded as your business grows.
+            Lebencare provides accessible, compassionate healthcare services including telehealth, 
+            primary care, wellness support, and in‑office treatments. Our mission is to deliver 
+            high‑quality care with flexibility, transparency, and a patient‑centered approach.
         </p>
     </section>
 
+    <!-- Services -->
     <section>
-        <h2>Contact</h2>
-        <p>Email: info@lebencare.com</p>
+        <h2>Services</h2>
+
+        <div class="services-group">
+            <h3>Telehealth Across Florida (No insurance required)</h3>
+            <ul>
+                <li>Sick Visits (minor infections)</li>
+                <li>Weight Loss</li>
+                <li>Medication Refills</li>
+            </ul>
+        </div>
+
+        <div class="services-group">
+            <h3>Self‑Employee Primary Care Membership</h3>
+            <ul>
+                <li>Self‑employed business owners</li>
+                <li>Freelancers</li>
+                <li>Contractors</li>
+            </ul>
+        </div>
+
+        <div class="services-group">
+            <h3>Direct Primary Care Model</h3>
+            <ul>
+                <li>Flexible Access</li>
+                <li>Health Care & Prevention</li>
+            </ul>
+        </div>
+
+        <div class="services-group">
+            <h3>Corporate Wellness</h3>
+            <ul>
+                <li>Health Coaching</li>
+                <li>Pre‑employment Physicals</li>
+                <li>Chronic Care Management</li>
+            </ul>
+        </div>
+
+        <div class="services-group">
+            <h3>In‑Office Services</h3>
+            <ul>
+                <li>Primary Care – routine visits and labs</li>
+                <li>IV Therapy & Injections</li>
+                <li>Aesthetic Wellness</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+        <h2>Contact Us</h2>
+        <form action="mailto:contactus@lebencare.com" method="POST" enctype="text/plain">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="tel" name="Phone" placeholder="Your Phone Number" required>
+            <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <footer>
