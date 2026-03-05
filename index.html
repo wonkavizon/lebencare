@@ -1,215 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebencare</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leben Care</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        /* Header */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 30px;
-            background: #2a7de1;
-            color: white;
-        }
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background: white;
+    }
 
-        .header .logo {
-            font-size: 28px;
-            font-weight: bold;
-        }
+    .header img {
+      height: 60px;
+    }
 
-        .header a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
+    .header a {
+      color: #1f4e9e;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-        /* Hero */
-        .hero {
-            background: #e8f1fc;
-            padding: 80px 20px;
-            text-align: center;
-        }
+    /* Hero */
+    .hero {
+      background: #e8f1fc;
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
 
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
 
-        /* Sections */
-        section {
-            padding: 50px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+    /* Sections */
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-        h2 {
-            color: #2a7de1;
-            margin-bottom: 10px;
-        }
+    h2 {
+      color: #2a7de1;
+      margin-bottom: 10px;
+    }
 
-        .services-group {
-            margin-bottom: 30px;
-        }
+    ul {
+      padding-left: 20px;
+    }
 
-        .services-group h3 {
-            margin-bottom: 8px;
-            color: #444;
-        }
+    li {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-        .services-group ul {
-            list-style: none;
-            padding: 0;
-        }
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-        .services-group li {
-            background: #f4f4f4;
-            padding: 10px 15px;
-            margin-bottom: 8px;
-            border-radius: 6px;
-        }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
 
-        /* Contact Form */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+    button {
+      padding: 12px;
+      background: #2a7de1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+    }
 
-        input, textarea {
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 16px;
-        }
+    button:hover {
+      background: #1f5fa8;
+    }
 
-        button {
-            padding: 12px;
-            background: #2a7de1;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #1f5fa8;
-        }
-
-        /* Footer */
-        footer {
-            background: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
+    footer {
+      background: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <div class="header">
-        <div class="logo">Lebencare</div>
-        <a href="#about">About Us</a>
-    </div>
+  <!-- Header -->
+  <div class="header">
+    <img src="logo.png" alt="Leben Care Logo" />
+    <a href="#about">About Us</a>
+  </div>
 
-    <!-- Hero -->
-    <div class="hero">
-        <h1>Lebencare</h1>
-        <p>Telehealth, Primary Care, and Wellness Services Across Florida</p>
-    </div>
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Leben Care</h1>
+    <p>Caring for Your Life's Journey</p>
+  </div>
 
-    <!-- About -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>
-            Lebencare provides accessible, compassionate healthcare services including telehealth, 
-            primary care, wellness support, and in‑office treatments. Our mission is to deliver 
-            high‑quality care with flexibility, transparency, and a patient‑centered approach.
-        </p>
-    </section>
+  <!-- About -->
+  <section id="about">
+    <p>
+      At Leben Care we provide accessible, compassionate healthcare services including Telehealth and in-office treatments. 
+      Our mission is to deliver high-quality care with flexibility, transparency, and a patient-centered approach.
+    </p>
+  </section>
 
-    <!-- Services -->
-    <section>
-        <h2>Services</h2>
+  <!-- Services -->
+  <section>
+    <h2>Services</h2>
 
-        <div class="services-group">
-            <h3>Telehealth Across Florida (No insurance required)</h3>
-            <ul>
-                <li>Sick Visits (minor infections)</li>
-                <li>Weight Loss</li>
-                <li>Medication Refills</li>
-            </ul>
-        </div>
+    <h3>Telehealth Across Florida (No insurance required)</h3>
+    <ul>
+      <li>Sick Visits (minor infections)</li>
+      <li>Weight Loss</li>
+      <li>Medication Refills</li>
+    </ul>
 
-        <div class="services-group">
-            <h3>Self‑Employee Primary Care Membership</h3>
-            <ul>
-                <li>Self‑employed business owners</li>
-                <li>Freelancers</li>
-                <li>Contractors</li>
-            </ul>
-        </div>
+    <h3>Self-Employee Primary Care Membership</h3>
+    <ul>
+      <li>Self-employed Business Owners</li>
+      <li>Freelancers</li>
+      <li>Contractors</li>
+    </ul>
 
-        <div class="services-group">
-            <h3>Direct Primary Care Model</h3>
-            <ul>
-                <li>Flexible Access</li>
-                <li>Health Care & Prevention</li>
-            </ul>
-        </div>
+    <h3>Direct Primary Care Model</h3>
+    <ul>
+      <li>Flexible Access</li>
+      <li>Health Care & Prevention</li>
+    </ul>
 
-        <div class="services-group">
-            <h3>Corporate Wellness</h3>
-            <ul>
-                <li>Health Coaching</li>
-                <li>Pre‑employment Physicals</li>
-                <li>Chronic Care Management</li>
-            </ul>
-        </div>
+    <h3>Corporate Wellness</h3>
+    <ul>
+      <li>Health Coaching</li>
+      <li>Pre-employment Physicals</li>
+      <li>Chronic Care Management</li>
+    </ul>
 
-        <div class="services-group">
-            <h3>In‑Office Services</h3>
-            <ul>
-                <li>Primary Care – routine visits and labs</li>
-                <li>IV Therapy & Injections</li>
-                <li>Aesthetic Wellness</li>
-            </ul>
-        </div>
-    </section>
+    <h3>In-Office Services</h3>
+    <ul>
+      <li>Primary Care – routine visits and labs</li>
+      <li>IV Therapy & Injections</li>
+      <li>Aesthetic Wellness</li>
+    </ul>
+  </section>
 
-    <!-- Contact -->
-    <section>
-        <h2>Contact Us</h2>
-        <form action="mailto:contactus@lebencare.com" method="POST" enctype="text/plain">
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="tel" name="Phone" placeholder="Your Phone Number" required>
-            <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <!-- Contact -->
+  <section>
+    <h2>Contact Us</h2>
+    <form action="mailto:contactus@lebencare.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required />
+      <input type="tel" name="Phone" placeholder="Your Phone Number" required />
+      <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <footer>
-        © 2026 Lebencare
-    </footer>
+  <footer>
+    © 2026 Leben Care
+  </footer>
 
 </body>
 </html>
