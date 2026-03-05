@@ -12,14 +12,47 @@
       background: white;
       color: #0d2a57;
       line-height: 1.6;
-      padding: 20px;
     }
 
+    /* Banner Bar (copied from index) */
+    .banner {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      border-bottom: 2px solid #dcdcdc;
+    }
+
+    .banner-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .banner-left img {
+      height: 70px;
+    }
+
+    .logo-secondary {
+      height: 150px;
+    }
+
+    .banner-right a {
+      color: #0d2a57;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+      margin-left: 25px;
+    }
+
+    /* Page Title */
     h1 {
       font-family: "Times New Roman", Times, serif;
       font-size: 42px;
       font-style: italic;
       text-align: center;
+      margin-top: 40px;
       margin-bottom: 40px;
       color: #0d2a57;
     }
@@ -57,6 +90,21 @@
 
 <body>
 
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner-left">
+      <img src="logo.png" alt="Leben Care Logo">
+      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary" style="width: 200px; height: auto;">
+    </div>
+
+    <div class="banner-right">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Page Title -->
   <h1>Our Services</h1>
 
   <!-- TELEHEALTH -->
