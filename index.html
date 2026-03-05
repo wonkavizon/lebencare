@@ -13,33 +13,36 @@
       line-height: 1.6;
     }
 
-    /* Top Nav */
-    .top-nav {
-      display: flex;
-      justify-content: flex-end;
-      padding: 15px 30px;
-      background: #0d2a57;
-    }
-
-    .top-nav a {
-      color: #ffffff;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    /* Logo Section */
-    .logo-section {
-      text-align: center;
-      padding: 40px 0;
+    /* White Section with Logo + About */
+    .white-section {
       background: white;
+      text-align: center;
+      padding: 40px 20px;
     }
 
-    .logo-section img {
-      height: 360px;
+    .white-section img {
+      height: 720px; /* Twice as big as before */
     }
 
-    /* Blue Background Section */
+    .about-heading {
+      font-size: 36px;
+      font-weight: bold;
+      color: #0d2a57; /* Dark blue */
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .about-text {
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      font-size: 30px; /* 3x larger */
+      color: #0d2a57; /* Dark blue */
+      max-width: 900px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    /* Dark Blue Content Area */
     .content-area {
       background: #0d2a57;
       color: white;
@@ -69,13 +72,6 @@
     li {
       font-weight: bold;
       margin-bottom: 10px;
-    }
-
-    /* About Text Styling */
-    .about-text {
-      font-family: "Times New Roman", Times, serif;
-      font-style: italic;
-      font-size: 24px;
     }
 
     /* Contact Form */
@@ -119,27 +115,21 @@
 
 <body>
 
-  <!-- Top Nav -->
-  <div class="top-nav">
-    <a href="#about">About</a>
-  </div>
-
-  <!-- Logo -->
-  <div class="logo-section">
+  <!-- White Section with Logo + About -->
+  <div class="white-section">
     <img src="logo.png" alt="Leben Care Logo" />
+
+    <div class="about-heading">About Leben Care</div>
+
+    <p class="about-text">
+      At Leben Care we provide accessible, compassionate healthcare services including Telehealth 
+      and in-office treatments. Our mission is to deliver high-quality care with flexibility, 
+      transparency, and a patient-centered approach.
+    </p>
   </div>
 
-  <!-- Blue Background Content -->
+  <!-- Dark Blue Content -->
   <div class="content-area">
-
-    <!-- About -->
-    <section id="about">
-      <p class="about-text">
-        At Leben Care we provide accessible, compassionate healthcare services including Telehealth 
-        and in-office treatments. Our mission is to deliver high-quality care with flexibility, 
-        transparency, and a patient-centered approach.
-      </p>
-    </section>
 
     <!-- Services -->
     <section>
