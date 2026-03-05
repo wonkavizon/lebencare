@@ -48,7 +48,7 @@
     /* Mission Section */
     .white-section {
       background: white;
-      padding: 15px 20px; /* reduced padding */
+      padding: 15px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -61,11 +61,11 @@
       font-family: "Times New Roman", Times, serif;
       font-style: italic;
       font-weight: bold;
-      font-size: 22px; /* reduced size */
+      font-size: 22px;
       color: #0d2a57;
       max-width: 700px;
       text-align: center;
-      line-height: 1.3; /* tighter spacing */
+      line-height: 1.3;
     }
 
     /* Dark Blue Content Area */
@@ -75,29 +75,61 @@
       padding: 50px 20px;
     }
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      margin-bottom: 40px;
-    }
-
     h2 {
       color: #ffffff;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    h3 {
-      color: #ffffff;
+    /* Service Boxes Layout */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .service-box {
+      background: #ffffff;
+      color: #0d2a57;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      min-height: 150px;
+    }
+
+    .service-box h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #0d2a57;
+    }
+
+    .maroon-line {
+      width: 60%;
+      height: 2px;
+      background: #800000;
+      margin: 10px auto 15px auto;
+    }
+
+    /* Bottom row centered (2 boxes) */
+    .service-grid-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
       margin-top: 25px;
     }
 
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
+    .service-box-bottom {
+      background: #ffffff;
+      color: #0d2a57;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
       font-weight: bold;
-      margin-bottom: 10px;
+      width: 300px;
+      min-height: 150px;
     }
 
     /* Contact Form */
@@ -169,41 +201,44 @@
 
     <!-- Services -->
     <section id="services">
-      <h2>Available Services</h2>
+      <h2>Our Services</h2>
 
-      <h3>Telehealth Across Florida (No insurance required)</h3>
-      <ul>
-        <li>Sick Visits (minor infections)</li>
-        <li>Weight Loss</li>
-        <li>Medication Refills</li>
-      </ul>
+      <!-- Top Row: 3 Boxes -->
+      <div class="service-grid">
 
-      <h3>Self-Employee Primary Care Membership</h3>
-      <ul>
-        <li>Self-employed Business Owners</li>
-        <li>Freelancers</li>
-        <li>Contractors</li>
-      </ul>
+        <div class="service-box">
+          <h3>Telehealth Across Florida</h3>
+          <div class="maroon-line"></div>
+          <p>(No insurance required)</p>
+        </div>
 
-      <h3>Direct Primary Care Model</h3>
-      <ul>
-        <li>Flexible Access</li>
-        <li>Health Care & Prevention</li>
-      </ul>
+        <div class="service-box">
+          <h3>Self-Employee Primary Care Membership</h3>
+          <div class="maroon-line"></div>
+        </div>
 
-      <h3>Corporate Wellness</h3>
-      <ul>
-        <li>Health Coaching</li>
-        <li>Pre-employment Physicals</li>
-        <li>Chronic Care Management</li>
-      </ul>
+        <div class="service-box">
+          <h3>Direct Primary Care Model</h3>
+          <div class="maroon-line"></div>
+        </div>
 
-      <h3>In-Office Services</h3>
-      <ul>
-        <li>Primary Care – routine visits and labs</li>
-        <li>IV Therapy & Injections</li>
-        <li>Aesthetic Wellness</li>
-      </ul>
+      </div>
+
+      <!-- Bottom Row: 2 Boxes -->
+      <div class="service-grid-bottom">
+
+        <div class="service-box-bottom">
+          <h3>Corporate Wellness</h3>
+          <div class="maroon-line"></div>
+        </div>
+
+        <div class="service-box-bottom">
+          <h3>In-Office Services</h3>
+          <div class="maroon-line"></div>
+        </div>
+
+      </div>
+
     </section>
 
     <!-- Contact -->
