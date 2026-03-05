@@ -13,33 +13,44 @@
       line-height: 1.6;
     }
 
-    /* White Section with Logo + About */
+    /* Top Right About Link */
+    .top-link {
+      text-align: right;
+      padding: 15px 30px;
+      background: white;
+    }
+
+    .top-link a {
+      color: #0d2a57;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    /* White Section with Logo + About Text */
     .white-section {
       background: white;
-      text-align: center;
       padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      gap: 40px;
     }
 
     .white-section img {
       height: 720px; /* Twice as big as before */
     }
 
-    .about-heading {
-      font-size: 36px;
-      font-weight: bold;
-      color: #0d2a57; /* Dark blue */
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-
     .about-text {
       font-family: "Times New Roman", Times, serif;
       font-style: italic;
-      font-size: 30px; /* 3x larger */
-      color: #0d2a57; /* Dark blue */
-      max-width: 900px;
-      margin: 0 auto;
-      margin-bottom: 40px;
+      font-weight: bold;
+      font-size: 30px;
+      color: #0d2a57;
+      max-width: 500px;
+      text-align: right;
     }
 
     /* Dark Blue Content Area */
@@ -115,11 +126,14 @@
 
 <body>
 
-  <!-- White Section with Logo + About -->
+  <!-- Top Right About Link -->
+  <div class="top-link">
+    <a href="#about">About Leben Care</a>
+  </div>
+
+  <!-- White Section with Left Logo + Right Text -->
   <div class="white-section">
     <img src="logo.png" alt="Leben Care Logo" />
-
-    <div class="about-heading">About Leben Care</div>
 
     <p class="about-text">
       At Leben Care we provide accessible, compassionate healthcare services including Telehealth 
@@ -127,65 +141,3 @@
       transparency, and a patient-centered approach.
     </p>
   </div>
-
-  <!-- Dark Blue Content -->
-  <div class="content-area">
-
-    <!-- Services -->
-    <section>
-      <h2>Available Services</h2>
-
-      <h3>Telehealth Across Florida (No insurance required)</h3>
-      <ul>
-        <li>Sick Visits (minor infections)</li>
-        <li>Weight Loss</li>
-        <li>Medication Refills</li>
-      </ul>
-
-      <h3>Self-Employee Primary Care Membership</h3>
-      <ul>
-        <li>Self-employed Business Owners</li>
-        <li>Freelancers</li>
-        <li>Contractors</li>
-      </ul>
-
-      <h3>Direct Primary Care Model</h3>
-      <ul>
-        <li>Flexible Access</li>
-        <li>Health Care & Prevention</li>
-      </ul>
-
-      <h3>Corporate Wellness</h3>
-      <ul>
-        <li>Health Coaching</li>
-        <li>Pre-employment Physicals</li>
-        <li>Chronic Care Management</li>
-      </ul>
-
-      <h3>In-Office Services</h3>
-      <ul>
-        <li>Primary Care – routine visits and labs</li>
-        <li>IV Therapy & Injections</li>
-        <li>Aesthetic Wellness</li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section>
-      <h2>Contact Us</h2>
-      <form action="mailto:contactus@lebencare.com" method="POST" enctype="text/plain">
-        <input type="text" name="Name" placeholder="Your Name" required />
-        <input type="tel" name="Phone" placeholder="Your Phone Number" required />
-        <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-
-  </div>
-
-  <footer>
-    © 2026 Leben Care
-  </footer>
-
-</body>
-</html>
