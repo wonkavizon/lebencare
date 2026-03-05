@@ -8,13 +8,14 @@
   <style>
     body {
       margin: 0;
+      padding-top: 120px;
       font-family: Arial, sans-serif;
       background: white;
       color: #0d2a57;
       line-height: 1.6;
     }
 
-    /* Banner Bar (copied from index) */
+    /* FIXED Banner */
     .banner {
       background: white;
       display: flex;
@@ -22,6 +23,11 @@
       align-items: center;
       padding: 10px 30px;
       border-bottom: 2px solid #dcdcdc;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
     }
 
     .banner-left {
@@ -46,13 +52,11 @@
       margin-left: 25px;
     }
 
-    /* Page Title */
     h1 {
       font-family: "Times New Roman", Times, serif;
       font-size: 42px;
       font-style: italic;
       text-align: center;
-      margin-top: 40px;
       margin-bottom: 40px;
       color: #0d2a57;
     }
@@ -69,28 +73,25 @@
       font-size: 18px;
     }
 
-    a {
-      color: #0d2a57;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     .back-home {
       display: block;
       margin-top: 40px;
       text-align: center;
       font-size: 20px;
+      font-weight: bold;
+      color: #0d2a57;
+      text-decoration: none;
+    }
+
+    .back-home:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Banner -->
+  <!-- FIXED Banner -->
   <div class="banner">
     <div class="banner-left">
       <img src="logo.png" alt="Leben Care Logo">
@@ -98,16 +99,14 @@
     </div>
 
     <div class="banner-right">
-      <a href="index.html#about">About</a>
+      <a href="about.html">About</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#contact">Contact Us</a>
     </div>
   </div>
 
-  <!-- Page Title -->
   <h1>Our Services</h1>
 
-  <!-- TELEHEALTH -->
   <h2 id="telehealth">Telehealth Across Florida <span style="font-size:18px;">(No insurance required)</span></h2>
   <ul>
     <li>Sick Visits (minor infections)</li>
@@ -115,7 +114,6 @@
     <li>Medication Refills</li>
   </ul>
 
-  <!-- MEMBERSHIP -->
   <h2 id="membership">Self-Employee Primary Care Membership</h2>
   <ul>
     <li>Self Employee Business Owner</li>
@@ -123,14 +121,12 @@
     <li>Contractor</li>
   </ul>
 
-  <!-- DIRECT PRIMARY CARE -->
   <h2 id="dpc">Direct Primary Care Model</h2>
   <ul>
     <li>Flexible Access</li>
     <li>Health Care & Prevention</li>
   </ul>
 
-  <!-- CORPORATE WELLNESS -->
   <h2 id="corporate">Corporate Wellness</h2>
   <ul>
     <li>Health Coach</li>
@@ -138,7 +134,6 @@
     <li>Chronic Care Management</li>
   </ul>
 
-  <!-- IN OFFICE -->
   <h2 id="office">In-Office Services</h2>
   <ul>
     <li>Primary Care – Routine Visits and Labs</li>
