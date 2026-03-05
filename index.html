@@ -8,7 +8,7 @@
   <style>
     body {
       margin: 0;
-      padding-top: 120px;
+      padding-top: 120px; /* space for fixed banner */
       font-family: Arial, sans-serif;
       color: #333;
       line-height: 1.6;
@@ -167,6 +167,8 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      max-width: 500px; /* shrink width */
+      margin: auto; /* center form */
     }
 
     input, textarea {
@@ -174,6 +176,7 @@
       border: none;
       border-radius: 6px;
       font-size: 16px;
+      width: 100%;
     }
 
     button {
@@ -197,6 +200,21 @@
       text-align: center;
       font-size: 14px;
       color: #ffffffcc;
+    }
+
+    /* Extra spacing before Contact section */
+    .spacer {
+      height: 60px;
+    }
+
+    /* Confirmation message */
+    #confirmationMessage {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #ffffff;
+      font-weight: bold;
+      display: none;
     }
   </style>
 </head>
@@ -299,14 +317,23 @@
 
     </section>
 
+    <!-- Spacer before Contact -->
+    <div class="spacer"></div>
+
+    <!-- Contact -->
     <section id="contact">
       <h2>Contact Us</h2>
-      <form action="mailto:contactus@lebencare.com" method="POST" enctype="text/plain">
+
+      <!-- FORM HERE (Formspree) -->
+      <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
         <input type="text" name="Name" placeholder="Your Name" required />
         <input type="tel" name="Phone" placeholder="Your Phone Number" required />
         <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
         <button type="submit">Send Message</button>
       </form>
+
+      <div id="confirmationMessage">Your message has been sent.</div>
+
     </section>
 
   </div>
@@ -314,6 +341,36 @@
   <footer>
     © 2026 Leben Care
   </footer>
+
+  <!-- POPUP + FORM HANDLING SCRIPT -->
+  <script>
+    const form = document.getElementById("contactForm");
+    const confirmation = document.getElementById("confirmationMessage");
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        alert("Message Sent!");
+
+        form.reset();
+        confirmation.style.display = "block";
+
+        // Disable form fields
+        Array.from(form.elements).forEach(el => el.disabled = true);
+      } else {
+        alert("There was an issue sending your message. Please try again.");
+      }
+    });
+  </script>
 
 </body>
 </html>
