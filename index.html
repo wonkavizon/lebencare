@@ -74,7 +74,7 @@
       line-height: 1.3;
     }
 
-    /* Dark Blue Content Area */
+    /* Dark Blue Services Area */
     .content-area {
       background: #0d2a57;
       color: white;
@@ -158,6 +158,57 @@
       margin-top: 25px;
     }
 
+    /* NEW WHITE CONTACT SECTION */
+    .contact-section {
+      background: white;
+      padding: 60px 20px;
+      color: #0d2a57;
+    }
+
+    .contact-section h2 {
+      color: #0d2a57;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 2px solid #0d2a57;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    button {
+      padding: 12px;
+      background: #0d2a57;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #143b7d;
+    }
+
+    #confirmationMessage {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #0d2a57;
+      font-weight: bold;
+      display: none;
+    }
+
     footer {
       background: #0d2a57;
       padding: 20px;
@@ -185,7 +236,7 @@
   </div>
 
   <!-- Mission Section -->
-  <div class="white-section" id="about">
+  <div class="white-section">
     <p class="about-text">
       At Leben Care we provide accessible, compassionate healthcare services including Telehealth 
       and in-office treatments. Our mission is to deliver high-quality care with flexibility, 
@@ -193,18 +244,15 @@
     </p>
   </div>
 
+  <!-- SERVICES (unchanged) -->
   <div class="content-area">
-
     <section id="services">
       <h2>Our Services</h2>
 
       <div class="service-grid">
-
         <div class="service-box">
           <h3>Telehealth Across Florida</h3>
-          <p style="margin: 5px 0 10px 0; font-weight: normal; font-size: 16px;">
-            (No insurance required)
-          </p>
+          <p style="margin: 5px 0 10px 0; font-weight: normal; font-size: 16px;">(No insurance required)</p>
           <div class="maroon-line"></div>
           <ul>
             <li>Sick Visits (Minor Infections)</li>
@@ -234,11 +282,9 @@
           </ul>
           <a href="services.html#dpc" class="learn-more-btn">Learn More</a>
         </div>
-
       </div>
 
       <div class="service-grid-bottom">
-
         <div class="service-box-bottom">
           <h3>Corporate Wellness</h3>
           <div class="maroon-line"></div>
@@ -260,16 +306,54 @@
           </ul>
           <a href="services.html#office" class="learn-more-btn">Learn More</a>
         </div>
-
       </div>
-
     </section>
+  </div>
 
+  <!-- NEW WHITE CONTACT SECTION -->
+  <div class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
+      <input type="text" name="Name" placeholder="Your Name" required />
+      <input type="tel" name="Phone" placeholder="Your Phone Number" required />
+      <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="confirmationMessage">Your message has been sent.</div>
   </div>
 
   <footer>
     © 2026 Leben Care
   </footer>
+
+  <!-- POPUP + FORM HANDLING -->
+  <script>
+    const form = document.getElementById("contactForm");
+    const confirmation = document.getElementById("confirmationMessage");
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        alert("Message Sent!");
+        form.reset();
+        confirmation.style.display = "block";
+        Array.from(form.elements).forEach(el => el.disabled = true);
+      } else {
+        alert("There was an issue sending your message. Please try again.");
+      }
+    });
+  </script>
 
 </body>
 </html>
