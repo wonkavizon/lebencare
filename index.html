@@ -30,7 +30,11 @@
     }
 
     .banner-left img {
-      height: 70px; /* scaled-down logos */
+      height: 70px;
+    }
+
+    .logo-secondary {
+      height: 95px; /* larger logo1 */
     }
 
     .banner-right a {
@@ -45,15 +49,11 @@
       background: white;
       padding: 40px 20px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       max-width: 1200px;
       margin: auto;
       gap: 40px;
-    }
-
-    .white-section img {
-      height: 720px;
     }
 
     .about-text {
@@ -62,8 +62,8 @@
       font-weight: bold;
       font-size: 30px;
       color: #0d2a57;
-      max-width: 500px;
-      text-align: right;
+      max-width: 700px;
+      text-align: center;
     }
 
     /* Dark Blue Content Area */
@@ -143,7 +143,7 @@
   <div class="banner">
     <div class="banner-left">
       <img src="logo.png" alt="Leben Care Logo">
-      <img src="logo1.png" alt="Leben Care Logo 2">
+      <img src="logo1.png" alt="Leben Care Logo 2" class="logo-secondary">
     </div>
 
     <div class="banner-right">
@@ -151,9 +151,8 @@
     </div>
   </div>
 
-  <!-- Logo + Mission -->
-  <div class="white-section">
-    <img src="logo.png" alt="Leben Care Logo" />
+  <!-- Mission Section (logo removed) -->
+  <div class="white-section" id="about">
     <p class="about-text">
       At Leben Care we provide accessible, compassionate healthcare services including Telehealth 
       and in-office treatments. Our mission is to deliver high-quality care with flexibility, 
