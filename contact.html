@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – Leben Care</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding-top: 120px;
+      font-family: Arial, sans-serif;
+      background: white;
+      color: #0d2a57;
+      line-height: 1.6;
+    }
+
+    /* FIXED Banner */
+    .banner {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      border-bottom: 2px solid #dcdcdc;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .banner-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .banner-left img {
+      height: 70px;
+    }
+
+    .logo-secondary {
+      height: 150px;
+    }
+
+    .banner-right a {
+      color: #0d2a57;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+      margin-left: 25px;
+    }
+
+    h1 {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 42px;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0d2a57;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 2px solid #0d2a57;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    button {
+      padding: 12px;
+      background: #0d2a57;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #143b7d;
+    }
+
+    #confirmationMessage {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #0d2a57;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- FIXED Banner -->
+  <div class="banner">
+    <div class="banner-left">
+      <img src="logo.png" alt="Leben Care Logo">
+      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary" style="width: 200px; height: auto;">
+    </div>
+
+    <div class="banner-right">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <h1>Contact Us</h1>
+
+  <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
+    <input type="text" name="Name" placeholder="Your Name" required />
+    <input type="tel" name="Phone" placeholder="Your Phone Number" required />
+    <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div id="confirmationMessage">Your message has been sent.</div>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const confirmation = document.getElementById("confirmationMessage");
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        alert("Message Sent!");
+
+        form.reset();
+        confirmation.style.display = "block";
+
+        Array.from(form.elements).forEach(el => el.disabled = true);
+      } else {
+        alert("There was an issue sending your message. Please try again.");
+      }
+    });
+  </script>
+
+</body>
+</html>
