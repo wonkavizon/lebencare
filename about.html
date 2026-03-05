@@ -8,13 +8,14 @@
   <style>
     body {
       margin: 0;
+      padding-top: 120px;
       font-family: Arial, sans-serif;
       background: white;
       color: #0d2a57;
       line-height: 1.6;
     }
 
-    /* Banner Bar */
+    /* FIXED Banner */
     .banner {
       background: white;
       display: flex;
@@ -22,6 +23,11 @@
       align-items: center;
       padding: 10px 30px;
       border-bottom: 2px solid #dcdcdc;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
     }
 
     .banner-left {
@@ -46,28 +52,21 @@
       margin-left: 25px;
     }
 
-    /* Page Title */
     h1 {
       font-family: "Times New Roman", Times, serif;
       font-size: 42px;
       font-style: italic;
       text-align: center;
-      margin-top: 40px;
       margin-bottom: 40px;
       color: #0d2a57;
     }
 
-    /* Content Section */
     .content {
       max-width: 900px;
       margin: auto;
       padding: 20px;
       font-size: 20px;
       line-height: 1.7;
-    }
-
-    p {
-      margin-bottom: 20px;
     }
 
     .back-home {
@@ -88,7 +87,7 @@
 
 <body>
 
-  <!-- Banner -->
+  <!-- FIXED Banner -->
   <div class="banner">
     <div class="banner-left">
       <img src="logo.png" alt="Leben Care Logo">
@@ -96,16 +95,14 @@
     </div>
 
     <div class="banner-right">
-      <a href="index.html#about">About</a>
+      <a href="about.html">About</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#contact">Contact Us</a>
     </div>
   </div>
 
-  <!-- Page Title -->
   <h1>About</h1>
 
-  <!-- Content -->
   <div class="content">
     <p>
       Karen is a dedicated and compassionate Family Nurse Practitioner committed to providing 
@@ -128,7 +125,4 @@
     </p>
 
     <a class="back-home" href="index.html">← Back to Home</a>
-  </div>
-
-</body>
-</html>
+  </div
