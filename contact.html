@@ -21,7 +21,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 30px;
+      padding: 10px 0px; /* match index.html */
       border-bottom: 2px solid #dcdcdc;
       position: fixed;
       top: 0;
@@ -33,15 +33,24 @@
     .banner-left {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 4px; /* match index.html */
     }
 
+    /* MEDIUM LOGO BUMP */
     .banner-left img {
-      height: 70px;
+      height: 56px;
     }
 
     .logo-secondary {
-      height: 150px;
+      height: 112px;
+    }
+
+    .banner-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .banner-right a {
@@ -49,7 +58,6 @@
       font-weight: bold;
       font-size: 20px;
       text-decoration: none;
-      margin-left: 25px;
     }
 
     h1 {
@@ -113,17 +121,16 @@
       <img src="logo.png" alt="Leben Care Logo">
     </a>
     <a href="index.html">
-      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary" style="width: 200px; height: auto;">
+      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary">
     </a>
   </div>
 
   <div class="banner-right">
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="contact.html">Contact Us&nbsp;&nbsp;&nbsp;</a>
   </div>
 </div>
-
 
   <h1>Contact Us</h1>
 
