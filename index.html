@@ -50,11 +50,17 @@
       white-space: nowrap;
     }
 
+    /* BLUE TEXT + DARK MAROON HOVER */
     .banner-right a {
-      color: #0d2a57;
+      color: #0d2a57; /* Blue */
       font-weight: bold;
       font-size: 20px;
       text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .banner-right a:hover {
+      color: #800000; /* Dark maroon hover */
     }
 
     /* Mission Section */
@@ -135,8 +141,8 @@
     .service-box:hover,
     .service-box-bottom:hover {
       transform: translateY(-8px);
-      background-color: #f9f4f4; /* soft warm fade */
-      border-color: #800000; /* maroon border */
+      background-color: #f9f4f4;
+      border-color: #800000;
       box-shadow: 0px 10px 22px rgba(0,0,0,0.22);
     }
 
@@ -163,7 +169,7 @@
       margin: 6px 0;
     }
 
-    /* Learn More Button (with hover effect) */
+    /* Learn More Button */
     .learn-more-btn {
       display: inline-block;
       margin-top: 15px;
@@ -419,7 +425,6 @@
 
   <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
 
-    <!-- DISCLAIMER ADDED HERE -->
     <div class="disclaimer">
       Please do not include personal medical information in this form. We will contact you directly to discuss your needs.
     </div>
