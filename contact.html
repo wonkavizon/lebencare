@@ -84,17 +84,26 @@
       width: 100%;
     }
 
+    .name-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .name-row input {
+      width: 100%;
+    }
+
     /* TABLE STYLE */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 2px; /* VERY tight spacing */
+      margin-top: 2px;
       font-size: 18px;
     }
 
     table td {
       border: 1px solid #0d2a57;
-      padding: 4px 6px; /* tighter spacing */
+      padding: 4px 6px;
     }
 
     table td:last-child {
@@ -191,8 +200,21 @@
 <!-- UPDATED CONTACT FORM -->
 <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
 
-  <input type="text" name="Name" placeholder="Your Name" required />
-  <input type="tel" name="Phone" placeholder="Your Phone Number" required />
+  <!-- FIRST + LAST NAME -->
+  <div class="name-row">
+    <input type="text" name="First Name" placeholder="First Name" required />
+    <input type="text" name="Last Name" placeholder="Last Name" required />
+  </div>
+
+  <!-- PHONE NUMBER -->
+  <input 
+    type="text" 
+    name="Phone Number" 
+    id="phoneInput"
+    placeholder="Phone Number"
+    maxlength="20"
+    required
+  />
 
   <div style="font-weight:bold; margin-top:2px; margin-bottom:0;">
     Which Services are you interested in?
@@ -247,6 +269,21 @@
 </footer>
 
 <script>
+  // PHONE AUTO-FORMATTER
+  const phoneInput = document.getElementById("phoneInput");
+
+  phoneInput.addEventListener("input", function(e) {
+    let x = e.target.value.replace(/\D/g, "").substring(0, 10);
+    let formatted = "";
+
+    if (x.length > 0) formatted = "(" + x.substring(0, 3);
+    if (x.length >= 4) formatted += ") " + x.substring(3, 6);
+    if (x.length >= 7) formatted += "-" + x.substring(6, 10);
+
+    e.target.value = formatted;
+  });
+
+  // FORM SUBMIT HANDLER
   const form = document.getElementById("contactForm");
   const confirmation = document.getElementById("confirmationMessage");
 
