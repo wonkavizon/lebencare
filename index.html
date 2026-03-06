@@ -104,13 +104,6 @@
       margin: auto;
     }
 
-    .service-grid-bottom {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 25px;
-    }
-
     .service-box,
     .service-box-bottom {
       background: #ffffff;
@@ -145,7 +138,7 @@
       margin: 6px 0;
     }
 
-    /* UPDATED LEARN MORE BUTTON */
+    /* Learn More Button (with hover effect) */
     .learn-more-btn {
       display: inline-block;
       margin-top: 15px;
@@ -226,6 +219,14 @@
     table td:last-child {
       text-align: right;
       width: 40px;
+    }
+
+    /* DISCLAIMER TEXT */
+    .disclaimer {
+      font-size: 13px;
+      color: black;
+      margin-bottom: 5px;
+      text-align: left;
     }
 
     button {
@@ -392,6 +393,11 @@
   <h2>Contact Us</h2>
 
   <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
+
+    <!-- DISCLAIMER ADDED HERE -->
+    <div class="disclaimer">
+      Please do not include personal medical information in this form. We will contact you directly to discuss your needs.
+    </div>
 
     <div class="name-row">
       <input type="text" name="First Name" placeholder="First Name" required />
