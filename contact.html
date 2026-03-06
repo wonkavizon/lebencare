@@ -12,7 +12,7 @@
       font-family: Arial, sans-serif;
       background: white;
       color: #0d2a57;
-      line-height: 1.4;
+      line-height: 1.6;
     }
 
     /* FIXED Banner */
@@ -49,6 +49,7 @@
       align-items: center;
       gap: 18px;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .banner-right a {
@@ -63,33 +64,18 @@
       font-size: 42px;
       font-style: italic;
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 40px;
       color: #0d2a57;
     }
 
-    /* Office Info */
-    .office-info {
-      max-width: 500px;
-      margin: 0 auto 25px auto;
-      text-align: center;
-      font-size: 18px;
-      line-height: 1.4;
-      color: #0d2a57;
-    }
-
-    .office-info a {
-      color: #0d2a57;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    /* Contact Form */
+    /* CONTACT FORM */
     form {
+      max-width: 500px;
+      margin: auto;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-width: 500px;
-      margin: auto;
+      padding: 20px;
     }
 
     input {
@@ -112,7 +98,6 @@
       width: 48%;
     }
 
-    /* TABLE STYLE */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -128,6 +113,14 @@
     table td:last-child {
       text-align: right;
       width: 40px;
+    }
+
+    /* DISCLAIMER TEXT */
+    .disclaimer {
+      font-size: 13px;
+      color: black;
+      margin-bottom: 5px;
+      text-align: left;
     }
 
     button {
@@ -159,41 +152,25 @@
     footer {
       background: #0d2a57;
       color: #ffffffcc;
-      padding: 40px 20px 20px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 60px;
-    }
-
-    .footer-content {
-      width: 100%;
-      max-width: 1200px;
+      padding: 30px 20px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 20px;
+      flex-wrap: wrap;
+      font-size: 16px;
+      margin-top: 60px;
     }
 
-    .footer-left {
-      text-align: left;
-    }
-
+    .footer-left,
     .footer-right {
-      text-align: right;
+      max-width: 45%;
     }
 
     .footer-title {
       font-size: 20px;
       font-weight: bold;
       color: white;
-      margin-bottom: 8px;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      font-size: 14px;
-      color: #ffffffcc;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -203,8 +180,12 @@
 <!-- FIXED Banner -->
 <div class="banner">
   <div class="banner-left">
-    <a href="index.html"><img src="logo.png" alt="Leben Care Logo"></a>
-    <a href="index.html"><img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary"></a>
+    <a href="index.html">
+      <img src="logo.png" alt="Leben Care Logo">
+    </a>
+    <a href="index.html">
+      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary">
+    </a>
   </div>
 
   <div class="banner-right">
@@ -216,24 +197,18 @@
 
 <h1>Contact Us</h1>
 
-<!-- OFFICE INFO SECTION -->
-<div class="office-info">
-  We are located at Jackson Drugs in Fort Pierce, FL.<br>
-  <a href="https://www.google.com/maps/dir/?api=1&destination=2301+Okeechobee+Rd,+Fort+Pierce,+FL+34950" target="_blank">
-    2301 Okeechobee Rd, Fort Pierce, FL 34950
-  </a>
-</div>
-
-<!-- UPDATED CONTACT FORM -->
 <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
 
-  <!-- FIRST + LAST NAME -->
+  <!-- DISCLAIMER ADDED HERE -->
+  <div class="disclaimer">
+    Please do not include personal medical information in this form. We will contact you directly to discuss your needs.
+  </div>
+
   <div class="name-row">
     <input type="text" name="First Name" placeholder="First Name" required />
     <input type="text" name="Last Name" placeholder="Last Name" required />
   </div>
 
-  <!-- PHONE NUMBER -->
   <input 
     type="text" 
     name="Phone Number" 
@@ -243,7 +218,6 @@
     required
   />
 
-  <!-- Hidden field to store selected services -->
   <input type="hidden" name="Selected Services" id="selectedServicesField">
 
   <div style="font-weight:bold; margin-top:2px; margin-bottom:0;">
@@ -280,21 +254,15 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-content">
-    <div class="footer-left">
-      <div class="footer-title">Connect With Us</div>
-    </div>
-
-    <div class="footer-right">
-      <div class="footer-title">Office Location</div>
-      2301 Okeechobee Rd<br>
-      Fort Pierce, FL 34950<br>
-      contactus@lebencare.com
-    </div>
+  <div class="footer-left">
+    <div class="footer-title">Connect With Us</div>
   </div>
 
-  <div class="footer-bottom">
-    © 2026 Leben Care
+  <div class="footer-right">
+    <div class="footer-title">Office Location</div>
+    2301 Okeechobee Rd<br>
+    Fort Pierce, FL 34950<br>
+    contactus@lebencare.com
   </div>
 </footer>
 
@@ -320,12 +288,10 @@
   form.addEventListener("submit", async function(event) {
     event.preventDefault();
 
-    // Collect selected services
     const selected = Array.from(document.querySelectorAll(".serviceBox"))
       .filter(box => box.checked)
       .map(box => box.value);
 
-    // Insert into hidden field
     document.getElementById("selectedServicesField").value =
       selected.length > 0 ? selected.join(", ") : "No service selected";
 
