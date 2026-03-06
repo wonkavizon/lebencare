@@ -104,6 +104,13 @@
       margin: auto;
     }
 
+    .service-grid-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 25px;
+    }
+
     .service-box,
     .service-box-bottom {
       background: #ffffff;
@@ -138,6 +145,7 @@
       margin: 6px 0;
     }
 
+    /* UPDATED LEARN MORE BUTTON */
     .learn-more-btn {
       display: inline-block;
       margin-top: 15px;
@@ -149,13 +157,19 @@
       font-size: 14px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.25s ease-in-out;
     }
 
-    .service-grid-bottom {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 25px;
+    .learn-more-btn:hover {
+      background: #0d2a57;
+      color: white;
+      border-color: #0d2a57;
+    }
+
+    .learn-more-btn:active {
+      background: #143b7d;
+      border-color: #143b7d;
+      color: white;
     }
 
     /* CONTACT SECTION */
