@@ -20,7 +20,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 30px;
+
+      /* FIX: Reduce padding to give nav more room */
+      padding: 10px 5px;
+
       border-bottom: 2px solid #dcdcdc;
       position: fixed;
       top: 0;
@@ -43,12 +46,12 @@
       height: 120px;
     }
 
-    /* FIXED: Prevent “Contact Us” from clipping */
+    /* FIX: Keep everything on one line, no clipping */
     .banner-right {
       display: flex;
       align-items: center;
 
-      /* REDUCED GAP = FIX */
+      /* Reduced gap to ensure fit */
       gap: 10px;
 
       white-space: nowrap;
