@@ -104,6 +104,7 @@
       margin: auto;
     }
 
+    /* UNIFORM SERVICE BOX HEIGHT */
     .service-box,
     .service-box-bottom {
       background: #ffffff;
@@ -112,7 +113,10 @@
       border-radius: 10px;
       text-align: center;
       font-weight: bold;
-      min-height: 150px;
+      height: 260px; /* uniform height */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     .maroon-line {
@@ -377,6 +381,7 @@
 <div class="contact-section" id="contact">
   <h2>Contact Us</h2>
 
+  <!-- FORM (unchanged from your latest version) -->
   <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
 
     <div class="name-row">
@@ -393,7 +398,6 @@
       required
     />
 
-    <!-- Hidden field to store selected services -->
     <input type="hidden" name="Selected Services" id="selectedServicesField">
 
     <div style="font-weight:bold; margin-top:2px; margin-bottom:0;">
@@ -471,12 +475,10 @@
   form.addEventListener("submit", async function(event) {
     event.preventDefault();
 
-    // Collect selected services
     const selected = Array.from(document.querySelectorAll(".serviceBox"))
       .filter(box => box.checked)
       .map(box => box.value);
 
-    // Insert into hidden field
     document.getElementById("selectedServicesField").value =
       selected.length > 0 ? selected.join(", ") : "No service selected";
 
