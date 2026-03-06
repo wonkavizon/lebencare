@@ -393,6 +393,9 @@
       required
     />
 
+    <!-- Hidden field to store selected services -->
+    <input type="hidden" name="Selected Services" id="selectedServicesField">
+
     <div style="font-weight:bold; margin-top:2px; margin-bottom:0;">
       Which Services are you interested in?
     </div>
@@ -400,23 +403,23 @@
     <table>
       <tr>
         <td>Telehealth Across Florida</td>
-        <td><input type="checkbox" name="Services[]" value="Telehealth Across Florida"></td>
+        <td><input type="checkbox" class="serviceBox" value="Telehealth Across Florida"></td>
       </tr>
       <tr>
         <td>Self-Employee Primary Care Membership</td>
-        <td><input type="checkbox" name="Services[]" value="Self-Employee Primary Care Membership"></td>
+        <td><input type="checkbox" class="serviceBox" value="Self-Employee Primary Care Membership"></td>
       </tr>
       <tr>
         <td>Direct Primary Care Model</td>
-        <td><input type="checkbox" name="Services[]" value="Direct Primary Care Model"></td>
+        <td><input type="checkbox" class="serviceBox" value="Direct Primary Care Model"></td>
       </tr>
       <tr>
         <td>Corporate Wellness</td>
-        <td><input type="checkbox" name="Services[]" value="Corporate Wellness"></td>
+        <td><input type="checkbox" class="serviceBox" value="Corporate Wellness"></td>
       </tr>
       <tr>
         <td>In-Office Services</td>
-        <td><input type="checkbox" name="Services[]" value="In-Office Services"></td>
+        <td><input type="checkbox" class="serviceBox" value="In-Office Services"></td>
       </tr>
     </table>
 
@@ -467,6 +470,15 @@
 
   form.addEventListener("submit", async function(event) {
     event.preventDefault();
+
+    // Collect selected services
+    const selected = Array.from(document.querySelectorAll(".serviceBox"))
+      .filter(box => box.checked)
+      .map(box => box.value);
+
+    // Insert into hidden field
+    document.getElementById("selectedServicesField").value =
+      selected.length > 0 ? selected.join(", ") : "No service selected";
 
     const formData = new FormData(form);
 
