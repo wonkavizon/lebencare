@@ -11,7 +11,7 @@
       padding-top: 120px;
       font-family: Arial, sans-serif;
       background: white;
-      color: black; /* ALL TEXT NOW BLACK */
+      color: black;
       line-height: 1.6;
     }
 
@@ -52,11 +52,17 @@
       flex-shrink: 0;
     }
 
+    /* BLUE TEXT + HOVER EFFECT */
     .banner-right a {
-      color: black; /* BLACK TEXT */
+      color: #0d2a57; /* Blue */
       font-weight: bold;
       font-size: 20px;
       text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .banner-right a:hover {
+      color: black; /* Hover to black */
     }
 
     h1 {
@@ -65,7 +71,7 @@
       font-weight: bold;
       text-align: center;
       margin-bottom: 40px;
-      color: black; /* BLACK */
+      color: black;
     }
 
     /* CONTACT FORM */
@@ -76,12 +82,12 @@
       flex-direction: column;
       gap: 10px;
       padding: 20px;
-      color: black; /* BLACK */
+      color: black;
     }
 
     input {
       padding: 10px;
-      border: 2px solid black; /* BLACK */
+      border: 2px solid black;
       border-radius: 6px;
       font-size: 16px;
       color: black;
@@ -109,7 +115,7 @@
     }
 
     table td {
-      border: 1px solid black; /* BLACK */
+      border: 1px solid black;
       padding: 4px 6px;
     }
 
@@ -147,7 +153,7 @@
 
     button {
       padding: 12px;
-      background: black; /* BLACK BUTTON */
+      background: black;
       color: white;
       border: none;
       border-radius: 6px;
@@ -170,10 +176,10 @@
       display: none;
     }
 
-    /* FOOTER */
+    /* BLUE FOOTER RESTORED */
     footer {
-      background: black; /* BLACK FOOTER */
-      color: white;
+      background: #0d2a57; /* Dark blue */
+      color: #ffffffcc;
       padding: 30px 20px;
       display: flex;
       justify-content: space-between;
