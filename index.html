@@ -20,7 +20,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      padding: 10px 30px;
       border-bottom: 2px solid #dcdcdc;
       position: fixed;
       top: 0;
@@ -43,10 +43,14 @@
       height: 120px;
     }
 
+    /* FIXED: Prevent “Contact Us” from clipping */
     .banner-right {
       display: flex;
-      gap: 20px;
+      align-items: center;
+      gap: 25px;
       white-space: nowrap;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
     }
 
     .banner-right a {
@@ -119,6 +123,23 @@
       height: 2px;
       background: #800000;
       margin: 10px auto 15px auto;
+    }
+
+    /* UPDATED: Remove bullets + center text */
+    .service-box ul,
+    .service-box-bottom ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .service-box ul li,
+    .service-box-bottom ul li {
+      margin: 6px 0;
     }
 
     .learn-more-btn {
@@ -195,66 +216,6 @@
       font-size: 14px;
       color: #ffffffcc;
     }
-
-    /* MOBILE RESPONSIVE DESIGN */
-    @media (max-width: 768px) {
-
-      body {
-        padding-top: 160px;
-      }
-
-      .banner {
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
-      }
-
-      .banner-left {
-        flex-direction: column;
-      }
-
-      .banner-left img {
-        height: 45px;
-      }
-
-      .logo-secondary {
-        height: 80px !important;
-      }
-
-      .banner-right {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        margin-top: 10px;
-      }
-
-      .banner-right a {
-        font-size: 18px;
-      }
-
-      .about-text {
-        font-size: 18px;
-        padding: 0 10px;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-grid-bottom {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      form {
-        max-width: 100%;
-        width: 90%;
-      }
-
-      h2 {
-        font-size: 32px;
-      }
-    }
   </style>
 </head>
 
@@ -294,7 +255,7 @@
           <p>(No insurance required)</p>
           <div class="maroon-line"></div>
           <ul>
-            <li>Sick Visits</li>
+            <li>Sick Visits (Minor Infections)</li>
             <li>Weight Loss</li>
             <li>Medication Refills</li>
           </ul>
@@ -305,9 +266,9 @@
           <h3>Self-Employee Primary Care Membership</h3>
           <div class="maroon-line"></div>
           <ul>
-            <li>Self-Employed</li>
-            <li>Freelancers</li>
-            <li>Contractors</li>
+            <li>Self Employee Business Owner</li>
+            <li>Freelancer</li>
+            <li>Contractor</li>
           </ul>
           <a href="services.html#membership" class="learn-more-btn">Learn More</a>
         </div>
@@ -317,7 +278,7 @@
           <div class="maroon-line"></div>
           <ul>
             <li>Flexible Access</li>
-            <li>Prevention & Wellness</li>
+            <li>Health Care & Preventions</li>
           </ul>
           <a href="services.html#dpc" class="learn-more-btn">Learn More</a>
         </div>
@@ -328,9 +289,9 @@
           <h3>Corporate Wellness</h3>
           <div class="maroon-line"></div>
           <ul>
-            <li>Health Coaching</li>
-            <li>Physicals</li>
-            <li>Chronic Care</li>
+            <li>Health Coach</li>
+            <li>Pre-employment Physicals</li>
+            <li>Chronic Care Management</li>
           </ul>
           <a href="services.html#corporate" class="learn-more-btn">Learn More</a>
         </div>
@@ -339,8 +300,8 @@
           <h3>In-Office Services</h3>
           <div class="maroon-line"></div>
           <ul>
-            <li>Primary Care</li>
-            <li>IV Therapy</li>
+            <li>Primary Care - Routine Visits and Labs</li>
+            <li>IV Therapy & Injections</li>
             <li>Aesthetic Wellness</li>
           </ul>
           <a href="services.html#office" class="learn-more-btn">Learn More</a>
