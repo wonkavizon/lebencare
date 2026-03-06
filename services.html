@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Leben Care – Services</title>
+  <title>Services – Leben Care</title>
 
   <style>
     body {
@@ -11,7 +11,7 @@
       padding-top: 120px;
       font-family: Arial, sans-serif;
       background: white;
-      color: black; /* TEXT NOW BLACK */
+      color: black;
       line-height: 1.6;
     }
 
@@ -49,82 +49,105 @@
       align-items: center;
       gap: 18px;
       white-space: nowrap;
-      flex-shrink: 0;
     }
 
+    /* BLUE TEXT + DARK MAROON HOVER */
     .banner-right a {
-      color: #0d2a57;
+      color: #0d2a57; /* Blue */
       font-weight: bold;
       font-size: 20px;
       text-decoration: none;
+      transition: color 0.25s ease;
     }
 
-    /* UPDATED MAIN HEADER */
+    .banner-right a:hover {
+      color: #800000; /* Dark maroon hover */
+    }
+
+    /* PAGE TITLE */
     h1 {
-      font-family: Arial, sans-serif; /* NORMAL FONT */
+      font-family: "Times New Roman", Times, serif;
       font-size: 42px;
-      font-weight: bold; /* BOLD */
-      text-align: left; /* LEFT JUSTIFIED */
-      margin-bottom: 40px;
-      padding-left: 20px; /* LEFT PADDING */
-      color: black; /* BLACK TEXT */
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0d2a57;
     }
 
-    /* UPDATED SECTION HEADERS */
+    /* SERVICE SECTIONS */
+    .service-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
     h2 {
       font-size: 28px;
-      margin-top: 40px;
-      color: black;
-      font-weight: bold;
-      padding-left: 25px; /* MORE LEFT PADDING */
-      text-align: left;
+      margin-top: 30px;
+      color: #0d2a57;
     }
 
-    /* UPDATED LIST PADDING */
+    p {
+      margin-bottom: 18px;
+    }
+
     ul {
       margin-top: 10px;
-      padding-left: 55px; /* DEEPER INDENTATION */
-      font-size: 18px;
-      color: black;
+      margin-bottom: 20px;
     }
 
-    .back-home {
-      display: block;
-      margin-top: 40px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bold;
-      color: #0d2a57;
-      text-decoration: none;
+    ul li {
+      margin-bottom: 6px;
     }
 
-    .back-home:hover {
-      text-decoration: underline;
+    .maroon-line {
+      width: 60%;
+      height: 2px;
+      background: #800000;
+      margin: 10px 0 20px 0;
     }
 
-    /* STANDARDIZED FOOTER */
+    /* FOOTER */
     footer {
-      background: #0d2a57;
+      background: #0d2a57; /* Dark blue */
       color: #ffffffcc;
-      padding: 30px 20px;
+      padding: 40px 20px 20px 20px;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      font-size: 16px;
+      flex-direction: column;
+      align-items: center;
       margin-top: 60px;
     }
 
-    .footer-left,
+    .footer-content {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
     .footer-right {
-      max-width: 45%;
+      text-align: right;
     }
 
     .footer-title {
       font-size: 20px;
       font-weight: bold;
       color: white;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 14px;
+      color: #ffffffcc;
     }
   </style>
 </head>
@@ -134,12 +157,8 @@
 <!-- FIXED Banner -->
 <div class="banner">
   <div class="banner-left">
-    <a href="index.html">
-      <img src="logo.png" alt="Leben Care Logo">
-    </a>
-    <a href="index.html">
-      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary">
-    </a>
+    <a href="index.html"><img src="logo.png" alt="Leben Care Logo"></a>
+    <a href="index.html"><img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary"></a>
   </div>
 
   <div class="banner-right">
@@ -149,55 +168,91 @@
   </div>
 </div>
 
-<h1>Our Services</h1>
+<!-- PAGE TITLE -->
+<h1>Available Services</h1>
 
-<h2 id="telehealth">Telehealth Across Florida <span style="font-size:18px;">(No insurance required)</span></h2>
-<ul>
-  <li>Sick Visits (minor infections)</li>
-  <li>Weight Loss</li>
-  <li>Medication Refills</li>
-</ul>
+<!-- SERVICE SECTIONS -->
+<div class="service-section" id="telehealth">
+  <h2>Telehealth Across Florida</h2>
+  <div class="maroon-line"></div>
+  <p>
+    We offer convenient telehealth services for patients across the state of Florida. No insurance is required.
+  </p>
+  <ul>
+    <li>Sick Visits (Minor Infections)</li>
+    <li>Weight Loss</li>
+    <li>Medication Refills</li>
+  </ul>
+</div>
 
-<h2 id="membership">Self-Employee Primary Care Membership</h2>
-<ul>
-  <li>Self Employee Business Owner</li>
-  <li>Freelancer</li>
-  <li>Contractor</li>
-</ul>
+<div class="service-section" id="membership">
+  <h2>Self‑Employee Primary Care Membership</h2>
+  <div class="maroon-line"></div>
+  <p>
+    Designed for freelancers, contractors, and self‑employed individuals seeking affordable, consistent primary care.
+  </p>
+  <ul>
+    <li>Self‑Employed Business Owners</li>
+    <li>Freelancers</li>
+    <li>Contractors</li>
+  </ul>
+</div>
 
-<h2 id="dpc">Direct Primary Care Model</h2>
-<ul>
-  <li>Flexible Access</li>
-  <li>Health Care & Prevention</li>
-</ul>
+<div class="service-section" id="dpc">
+  <h2>Direct Primary Care Model</h2>
+  <div class="maroon-line"></div>
+  <p>
+    A flexible, patient‑centered model offering direct access to your provider without the limitations of insurance.
+  </p>
+  <ul>
+    <li>Flexible Access</li>
+    <li>Health Care & Prevention</li>
+  </ul>
+</div>
 
-<h2 id="corporate">Corporate Wellness</h2>
-<ul>
-  <li>Health Coach</li>
-  <li>Pre Employment Physicals</li>
-  <li>Chronic Care Management</li>
-</ul>
+<div class="service-section" id="corporate">
+  <h2>Corporate Wellness</h2>
+  <div class="maroon-line"></div>
+  <p>
+    Support your workforce with comprehensive wellness services tailored to your company’s needs.
+  </p>
+  <ul>
+    <li>Health Coaching</li>
+    <li>Pre‑employment Physicals</li>
+    <li>Chronic Care Management</li>
+  </ul>
+</div>
 
-<h2 id="office">In-Office Services</h2>
-<ul>
-  <li>Primary Care – Routine Visits and Labs</li>
-  <li>IV Therapy & Injections</li>
-  <li>Aesthetic Wellness</li>
-</ul>
+<div class="service-section" id="office">
+  <h2>In‑Office Services</h2>
+  <div class="maroon-line"></div>
+  <p>
+    Visit our office for routine care, wellness services, and aesthetic treatments.
+  </p>
+  <ul>
+    <li>Primary Care – Routine Visits & Labs</li>
+    <li>IV Therapy & Injections</li>
+    <li>Aesthetic Wellness</li>
+  </ul>
+</div>
 
-<a class="back-home" href="index.html">← Back to Home</a>
-
-<!-- STANDARDIZED FOOTER -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-left">
-    <div class="footer-title">Connect With Us</div>
+  <div class="footer-content">
+    <div class="footer-left">
+      <div class="footer-title">Connect With Us</div>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-title">Office Location</div>
+      2301 Okeechobee Rd<br>
+      Fort Pierce, FL 34950<br>
+      contactus@lebencare.com
+    </div>
   </div>
 
-  <div class="footer-right">
-    <div class="footer-title">Office Location</div>
-    2301 Okeechobee Rd<br>
-    Fort Pierce, FL 34950<br>
-    contactus@lebencare.com
+  <div class="footer-bottom">
+    © 2026 Leben Care
   </div>
 </footer>
 
