@@ -27,18 +27,12 @@
       left: 0;
       width: 100%;
       z-index: 999;
-
-      /* NEW: allow wrapping instead of clipping */
-      flex-wrap: wrap;
     }
 
     .banner-left {
       display: flex;
       align-items: center;
       gap: 10px;
-
-      /* NEW: allow right side to have space */
-      flex-grow: 1;
     }
 
     .banner-left img {
@@ -53,13 +47,12 @@
     .banner-right {
       display: flex;
       align-items: center;
-      gap: 25px;
-      white-space: nowrap;
-      flex-wrap: nowrap;
-      flex-shrink: 0;
 
-      /* NEW: guarantee enough room for text */
-      min-width: 300px;
+      /* REDUCED GAP = FIX */
+      gap: 10px;
+
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .banner-right a {
