@@ -65,7 +65,7 @@
       font-size: 42px;
       font-style: italic;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       color: #0d2a57;
     }
 
@@ -73,7 +73,7 @@
     form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 12px;
       max-width: 500px;
       margin: auto;
     }
@@ -86,9 +86,15 @@
       width: 100%;
     }
 
-    .checkbox-group label {
+    table {
+      width: 100%;
+      border-collapse: collapse;
       font-size: 18px;
-      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    table td {
+      padding: 4px 0;
     }
 
     button {
@@ -100,6 +106,7 @@
       font-size: 18px;
       cursor: pointer;
       font-weight: bold;
+      margin-top: 10px;
     }
 
     button:hover {
@@ -186,23 +193,46 @@
     <input type="text" name="Name" placeholder="Your Name" required />
     <input type="tel" name="Phone" placeholder="Your Phone Number" required />
 
-    <label style="font-weight:bold; margin-top:10px;">
+    <div style="font-weight:bold; margin-top:5px; margin-bottom:5px;">
       Which Services are you interested in?
-    </label>
-
-    <div class="checkbox-group" style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
-
-      <label><input type="checkbox" name="Services[]" value="Telehealth Across Florida"> Telehealth Across Florida</label>
-
-      <label><input type="checkbox" name="Services[]" value="Self-Employee Primary Care Membership"> Self-Employee Primary Care Membership</label>
-
-      <label><input type="checkbox" name="Services[]" value="Direct Primary Care Model"> Direct Primary Care Model</label>
-
-      <label><input type="checkbox" name="Services[]" value="Corporate Wellness"> Corporate Wellness</label>
-
-      <label><input type="checkbox" name="Services[]" value="In-Office Services"> In-Office Services</label>
-
     </div>
+
+    <table>
+      <tr>
+        <td>Telehealth Across Florida</td>
+        <td style="text-align:right;">
+          <input type="checkbox" name="Services[]" value="Telehealth Across Florida">
+        </td>
+      </tr>
+
+      <tr>
+        <td>Self-Employee Primary Care Membership</td>
+        <td style="text-align:right;">
+          <input type="checkbox" name="Services[]" value="Self-Employee Primary Care Membership">
+        </td>
+      </tr>
+
+      <tr>
+        <td>Direct Primary Care Model</td>
+        <td style="text-align:right;">
+          <input type="checkbox" name="Services[]" value="Direct Primary Care Model">
+        </td>
+      </tr>
+
+      <tr>
+        <td>Corporate Wellness</td>
+        <td style="text-align:right;">
+          <input type="checkbox" name="Services[]" value="Corporate Wellness">
+        </td>
+      </tr>
+
+      <tr>
+        <td>In-Office Services</td>
+        <td style="text-align:right;">
+          <input type="checkbox" name="Services[]" value="In-Office Services">
+        </td>
+      </tr>
+    </table>
 
     <button type="submit">Request Appointment</button>
   </form>
