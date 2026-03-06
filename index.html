@@ -21,8 +21,8 @@
       justify-content: space-between;
       align-items: center;
 
-      /* Increased right padding to prevent cutoff */
-      padding: 10px 12px;
+      /* Reduced padding to maximize horizontal space */
+      padding: 10px 0px;
 
       border-bottom: 2px solid #dcdcdc;
       position: fixed;
@@ -49,14 +49,11 @@
       height: 92px; /* was 120px */
     }
 
-    /* Nav (Contact Us) */
+    /* Nav (Contact Us restored, 20px font) */
     .banner-right {
       display: flex;
       align-items: center;
-
-      /* Slightly increased gap for breathing room */
-      gap: 20px;
-
+      gap: 18px;
       white-space: nowrap;
       flex-shrink: 0;
     }
@@ -64,10 +61,7 @@
     .banner-right a {
       color: #0d2a57;
       font-weight: bold;
-
-      /* Reduced from 20px → 18px */
-      font-size: 18px;
-
+      font-size: 20px;
       text-decoration: none;
     }
 
@@ -241,7 +235,7 @@
     <div class="banner-right">
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="contact.html">Contact Us&nbsp;&nbsp;&nbsp;</a>
     </div>
   </div>
 
