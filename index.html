@@ -21,8 +21,8 @@
       justify-content: space-between;
       align-items: center;
 
-      /* Reduced padding to maximize horizontal space */
-      padding: 10px 0px;
+      /* Increased right padding to prevent cutoff */
+      padding: 10px 12px;
 
       border-bottom: 2px solid #dcdcdc;
       position: fixed;
@@ -49,11 +49,14 @@
       height: 92px; /* was 120px */
     }
 
-    /* Nav (Contact Us restored, 20px font) */
+    /* Nav (Contact Us) */
     .banner-right {
       display: flex;
       align-items: center;
-      gap: 18px;
+
+      /* Slightly increased gap for breathing room */
+      gap: 20px;
+
       white-space: nowrap;
       flex-shrink: 0;
     }
@@ -61,7 +64,10 @@
     .banner-right a {
       color: #0d2a57;
       font-weight: bold;
-      font-size: 20px;
+
+      /* Reduced from 20px → 18px */
+      font-size: 18px;
+
       text-decoration: none;
     }
 
