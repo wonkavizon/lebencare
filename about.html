@@ -21,7 +21,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0px; /* match index.html */
+      padding: 10px 0px;
       border-bottom: 2px solid #dcdcdc;
       position: fixed;
       top: 0;
@@ -33,7 +33,7 @@
     .banner-left {
       display: flex;
       align-items: center;
-      gap: 4px; /* match index.html */
+      gap: 4px;
     }
 
     /* MEDIUM LOGO BUMP */
@@ -90,6 +90,47 @@
     .back-home:hover {
       text-decoration: underline;
     }
+
+    /* STANDARDIZED FOOTER */
+    footer {
+      background: #0d2a57;
+      color: #ffffffcc;
+      padding: 40px 20px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    .footer-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 14px;
+      color: #ffffffcc;
+    }
   </style>
 </head>
 
@@ -138,17 +179,24 @@
 
     <a class="back-home" href="index.html">← Back to Home</a>
   </div>
- <!-- STANDARDIZED FOOTER -->
+
+  <!-- STANDARDIZED FOOTER -->
   <footer>
-    <div class="footer-left">
-      <div class="footer-title">Connect With Us</div>
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="footer-title">Connect With Us</div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-title">Office Location</div>
+        2301 Okeechobee Rd<br>
+        Fort Pierce, FL 34950<br>
+        contactus@lebencare.com
+      </div>
     </div>
 
-    <div class="footer-right">
-      <div class="footer-title">Office Location</div>
-      2301 Okeechobee Rd<br>
-      Fort Pierce, FL 34950<br>
-      contactus@lebencare.com
+    <div class="footer-bottom">
+      © 2026 Leben Care
     </div>
   </footer>
 
