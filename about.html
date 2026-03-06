@@ -21,7 +21,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 30px;
+      padding: 10px 0px; /* match index.html */
       border-bottom: 2px solid #dcdcdc;
       position: fixed;
       top: 0;
@@ -33,15 +33,24 @@
     .banner-left {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 4px; /* match index.html */
     }
 
+    /* MEDIUM LOGO BUMP */
     .banner-left img {
-      height: 70px;
+      height: 56px;
     }
 
     .logo-secondary {
-      height: 150px;
+      height: 112px;
+    }
+
+    .banner-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .banner-right a {
@@ -49,7 +58,6 @@
       font-weight: bold;
       font-size: 20px;
       text-decoration: none;
-      margin-left: 25px;
     }
 
     h1 {
@@ -88,46 +96,48 @@
 <body>
 
   <!-- FIXED Banner -->
-<div class="banner">
-  <div class="banner-left">
-    <a href="index.html">
-      <img src="logo.png" alt="Leben Care Logo">
-    </a>
-    <a href="index.html">
-      <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary" style="width: 200px; height: auto;">
-    </a>
-  </div>
+  <div class="banner">
+    <div class="banner-left">
+      <a href="index.html">
+        <img src="logo.png" alt="Leben Care Logo">
+      </a>
+      <a href="index.html">
+        <img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary">
+      </a>
+    </div>
 
-  <div class="banner-right">
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact Us</a>
+    <div class="banner-right">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact Us&nbsp;&nbsp;&nbsp;</a>
+    </div>
   </div>
-</div>
-
 
   <h1>About</h1>
 
   <div class="content">
     <p>
-      Karen is a dedicated and compassionate Family Nurse Practitioner committed to providing 
-      high‑quality, patient‑centered care. Her medical journey began in the Caribbean, where she 
-      completed her medical studies and developed a strong foundation in clinical medicine and 
+      Karen is a dedicated and compassionate Family Nurse Practitioner committed to providing
+      high‑quality, patient‑centered care. Her medical journey began in the Caribbean, where she
+      completed her medical studies and developed a strong foundation in clinical medicine and
       community health.
     </p>
 
     <p>
-      After years of providing compassionate care in underserved areas, Karen continued her career 
-      in the United States, where she became a licensed Nurse Practitioner. She combines her global 
-      medical background with evidence‑based nursing practice to deliver comprehensive care that 
+      After years of providing compassionate care in underserved areas, Karen continued her career
+      in the United States, where she became a licensed Nurse Practitioner. She combines her global
+      medical background with evidence‑based nursing practice to deliver comprehensive care that
       emphasizes education, prevention, and holistic well‑being.
     </p>
 
     <p>
-      Her clinical interests include primary care, chronic disease management, women’s health, and 
-      aesthetics. She is passionate about empowering patients through knowledge and compassion, 
+      Her clinical interests include primary care, chronic disease management, women’s health, and
+      aesthetics. She is passionate about empowering patients through knowledge and compassion,
       ensuring they feel heard, supported, and cared for every step of the way.
     </p>
 
     <a class="back-home" href="index.html">← Back to Home</a>
-  </div
+  </div>
+
+</body>
+</html>
