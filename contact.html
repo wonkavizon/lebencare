@@ -123,6 +123,25 @@
       text-align: left;
     }
 
+    /* OFFICE INFO TEXT */
+    .office-info {
+      font-size: 16px;
+      color: #0d2a57;
+      margin-bottom: 15px;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .office-info a {
+      color: #0d2a57;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .office-info a:hover {
+      text-decoration: underline;
+    }
+
     button {
       padding: 12px;
       background: #0d2a57;
@@ -199,7 +218,16 @@
 
 <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
 
-  <!-- DISCLAIMER ADDED HERE -->
+  <!-- OFFICE INFO RESTORED HERE -->
+  <div class="office-info">
+    Our office is located at:<br>
+    <a href="https://www.google.com/maps?q=2301+Okeechobee+Rd,+Fort+Pierce,+FL+34950" target="_blank">
+      2301 Okeechobee Rd, Fort Pierce, FL 34950
+    </a><br>
+    You may also reach us at: contactus@lebencare.com
+  </div>
+
+  <!-- DISCLAIMER BELOW OFFICE INFO -->
   <div class="disclaimer">
     Please do not include personal medical information in this form. We will contact you directly to discuss your needs.
   </div>
