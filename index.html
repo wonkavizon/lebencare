@@ -35,7 +35,6 @@
       gap: 4px;
     }
 
-    /* MEDIUM LOGO BUMP */
     .banner-left img {
       height: 56px;
     }
@@ -49,7 +48,6 @@
       align-items: center;
       gap: 18px;
       white-space: nowrap;
-      flex-shrink: 0;
     }
 
     .banner-right a {
@@ -160,7 +158,7 @@
       margin-top: 25px;
     }
 
-    /* NEW WHITE CONTACT SECTION */
+    /* CONTACT SECTION */
     .contact-section {
       background: white;
       padding: 60px 20px;
@@ -174,17 +172,46 @@
     form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 10px;
       max-width: 500px;
       margin: auto;
     }
 
-    input, textarea {
-      padding: 12px;
+    input {
+      padding: 10px;
       border: 2px solid #0d2a57;
       border-radius: 6px;
       font-size: 16px;
+    }
+
+    .name-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .name-row input {
       width: 100%;
+    }
+
+    #phoneInput {
+      width: 48%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2px;
+      font-size: 18px;
+    }
+
+    table td {
+      border: 1px solid #0d2a57;
+      padding: 4px 6px;
+    }
+
+    table td:last-child {
+      text-align: right;
+      width: 40px;
     }
 
     button {
@@ -196,18 +223,23 @@
       font-size: 18px;
       cursor: pointer;
       font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #143b7d;
     }
 
     #confirmationMessage {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 15px;
       font-size: 20px;
       color: #0d2a57;
       font-weight: bold;
       display: none;
     }
 
-    /* STANDARDIZED FOOTER */
+    /* FOOTER */
     footer {
       background: #0d2a57;
       color: #ffffffcc;
@@ -252,155 +284,208 @@
 
 <body>
 
-  <!-- FIXED Banner -->
-  <div class="banner">
-    <div class="banner-left">
-      <a href="index.html"><img src="logo.png" alt="Leben Care Logo"></a>
-      <a href="index.html"><img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary"></a>
-    </div>
-
-    <div class="banner-right">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact Us&nbsp;&nbsp;&nbsp;</a>
-    </div>
+<!-- FIXED Banner -->
+<div class="banner">
+  <div class="banner-left">
+    <a href="index.html"><img src="logo.png" alt="Leben Care Logo"></a>
+    <a href="index.html"><img src="textlogo1.png" alt="Leben Care Logo 2" class="logo-secondary"></a>
   </div>
 
-  <!-- Mission Section -->
-  <div class="white-section">
-    <p class="about-text">
-      At Leben Care we provide accessible, compassionate healthcare services including Telehealth 
-      and in-office treatments. Our mission is to deliver high-quality care with flexibility, 
-      transparency, and a patient-centered approach.
-    </p>
+  <div class="banner-right">
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact Us&nbsp;&nbsp;&nbsp;</a>
   </div>
+</div>
 
-  <!-- SERVICES -->
-  <div class="content-area">
-    <section id="services">
-      <h2>Our Services</h2>
+<!-- Mission Section -->
+<div class="white-section">
+  <p class="about-text">
+    At Leben Care we provide accessible, compassionate healthcare services including Telehealth 
+    and in-office treatments. Our mission is to deliver high-quality care with flexibility, 
+    transparency, and a patient-centered approach.
+  </p>
+</div>
 
-      <div class="service-grid">
-        <div class="service-box">
-          <h3>Telehealth Across Florida</h3>
-          <p>(No insurance required)</p>
-          <div class="maroon-line"></div>
-          <ul>
-            <li>Sick Visits (Minor Infections)</li>
-            <li>Weight Loss</li>
-            <li>Medication Refills</li>
-          </ul>
-          <a href="services.html#telehealth" class="learn-more-btn">Learn More</a>
-        </div>
+<!-- SERVICES -->
+<div class="content-area">
+  <section id="services">
+    <h2>Our Services</h2>
 
-        <div class="service-box">
-          <h3>Self-Employee Primary Care Membership</h3>
-          <div class="maroon-line"></div>
-          <ul>
-            <li>Self Employee Business Owner</li>
-            <li>Freelancer</li>
-            <li>Contractor</li>
-          </ul>
-          <a href="services.html#membership" class="learn-more-btn">Learn More</a>
-        </div>
-
-        <div class="service-box">
-          <h3>Direct Primary Care Model</h3>
-          <div class="maroon-line"></div>
-          <ul>
-            <li>Flexible Access</li>
-            <li>Health Care & Preventions</li>
-          </ul>
-          <a href="services.html#dpc" class="learn-more-btn">Learn More</a>
-        </div>
+    <div class="service-grid">
+      <div class="service-box">
+        <h3>Telehealth Across Florida</h3>
+        <p>(No insurance required)</p>
+        <div class="maroon-line"></div>
+        <ul>
+          <li>Sick Visits (Minor Infections)</li>
+          <li>Weight Loss</li>
+          <li>Medication Refills</li>
+        </ul>
+        <a href="services.html#telehealth" class="learn-more-btn">Learn More</a>
       </div>
 
-      <div class="service-grid-bottom">
-        <div class="service-box-bottom">
-          <h3>Corporate Wellness</h3>
-          <div class="maroon-line"></div>
-          <ul>
-            <li>Health Coach</li>
-            <li>Pre-employment Physicals</li>
-            <li>Chronic Care Management</li>
-          </ul>
-          <a href="services.html#corporate" class="learn-more-btn">Learn More</a>
-        </div>
-
-        <div class="service-box-bottom">
-          <h3>In-Office Services</h3>
-          <div class="maroon-line"></div>
-          <ul>
-            <li>Primary Care - Routine Visits and Labs</li>
-            <li>IV Therapy & Injections</li>
-            <li>Aesthetic Wellness</li>
-          </ul>
-          <a href="services.html#office" class="learn-more-btn">Learn More</a>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- CONTACT SECTION -->
-  <div class="contact-section" id="contact">
-    <h2>Contact Us</h2>
-
-    <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
-      <input type="text" name="Name" placeholder="Your Name" required />
-      <input type="tel" name="Phone" placeholder="Your Phone Number" required />
-      <textarea name="Message" rows="5" placeholder="How can we help you?" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-
-    <div id="confirmationMessage">Your message has been sent.</div>
-  </div>
-
-  <!-- STANDARDIZED FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-left">
-        <div class="footer-title">Connect With Us</div>
+      <div class="service-box">
+        <h3>Self-Employee Primary Care Membership</h3>
+        <div class="maroon-line"></div>
+        <ul>
+          <li>Self Employee Business Owner</li>
+          <li>Freelancer</li>
+          <li>Contractor</li>
+        </ul>
+        <a href="services.html#membership" class="learn-more-btn">Learn More</a>
       </div>
 
-      <div class="footer-right">
-        <div class="footer-title">Office Location</div>
-        2301 Okeechobee Rd<br>
-        Fort Pierce, FL 34950<br>
-        contactus@lebencare.com
+      <div class="service-box">
+        <h3>Direct Primary Care Model</h3>
+        <div class="maroon-line"></div>
+        <ul>
+          <li>Flexible Access</li>
+          <li>Health Care & Preventions</li>
+        </ul>
+        <a href="services.html#dpc" class="learn-more-btn">Learn More</a>
       </div>
     </div>
 
-    <div class="footer-bottom">
-      © 2026 Leben Care
+    <div class="service-grid-bottom">
+      <div class="service-box-bottom">
+        <h3>Corporate Wellness</h3>
+        <div class="maroon-line"></div>
+        <ul>
+          <li>Health Coach</li>
+          <li>Pre-employment Physicals</li>
+          <li>Chronic Care Management</li>
+        </ul>
+        <a href="services.html#corporate" class="learn-more-btn">Learn More</a>
+      </div>
+
+      <div class="service-box-bottom">
+        <h3>In-Office Services</h3>
+        <div class="maroon-line"></div>
+        <ul>
+          <li>Primary Care - Routine Visits and Labs</li>
+          <li>IV Therapy & Injections</li>
+          <li>Aesthetic Wellness</li>
+        </ul>
+        <a href="services.html#office" class="learn-more-btn">Learn More</a>
+      </div>
     </div>
-  </footer>
+  </section>
+</div>
 
-  <!-- POPUP + FORM HANDLING -->
-  <script>
-    const form = document.getElementById("contactForm");
-    const confirmation = document.getElementById("confirmationMessage");
+<!-- CONTACT SECTION -->
+<div class="contact-section" id="contact">
+  <h2>Contact Us</h2>
 
-    form.addEventListener("submit", async function(event) {
-      event.preventDefault();
+  <form id="contactForm" action="https://formspree.io/f/mlgprvol" method="POST">
 
-      const formData = new FormData(form);
+    <div class="name-row">
+      <input type="text" name="First Name" placeholder="First Name" required />
+      <input type="text" name="Last Name" placeholder="Last Name" required />
+    </div>
 
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { "Accept": "application/json" }
-      });
+    <input 
+      type="text" 
+      name="Phone Number" 
+      id="phoneInput"
+      placeholder="Phone Number"
+      maxlength="20"
+      required
+    />
 
-      if (response.ok) {
-        alert("Message Sent!");
-        form.reset();
-        confirmation.style.display = "block";
-        Array.from(form.elements).forEach(el => el.disabled = true);
-      } else {
-        alert("There was an issue sending your message. Please try again.");
-      }
+    <div style="font-weight:bold; margin-top:2px; margin-bottom:0;">
+      Which Services are you interested in?
+    </div>
+
+    <table>
+      <tr>
+        <td>Telehealth Across Florida</td>
+        <td><input type="checkbox" name="Services[]" value="Telehealth Across Florida"></td>
+      </tr>
+      <tr>
+        <td>Self-Employee Primary Care Membership</td>
+        <td><input type="checkbox" name="Services[]" value="Self-Employee Primary Care Membership"></td>
+      </tr>
+      <tr>
+        <td>Direct Primary Care Model</td>
+        <td><input type="checkbox" name="Services[]" value="Direct Primary Care Model"></td>
+      </tr>
+      <tr>
+        <td>Corporate Wellness</td>
+        <td><input type="checkbox" name="Services[]" value="Corporate Wellness"></td>
+      </tr>
+      <tr>
+        <td>In-Office Services</td>
+        <td><input type="checkbox" name="Services[]" value="In-Office Services"></td>
+      </tr>
+    </table>
+
+    <button type="submit">Request Appointment</button>
+  </form>
+
+  <div id="confirmationMessage">Your request has been sent.</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <div class="footer-title">Connect With Us</div>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-title">Office Location</div>
+      2301 Okeechobee Rd<br>
+      Fort Pierce, FL 34950<br>
+      contactus@lebencare.com
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Leben Care
+  </div>
+</footer>
+
+<script>
+  // PHONE AUTO-FORMATTER
+  const phoneInput = document.getElementById("phoneInput");
+
+  phoneInput.addEventListener("input", function(e) {
+    let x = e.target.value.replace(/\D/g, "").substring(0, 10);
+    let formatted = "";
+
+    if (x.length > 0) formatted = "(" + x.substring(0, 3);
+    if (x.length >= 4) formatted += ") " + x.substring(3, 6);
+    if (x.length >= 7) formatted += "-" + x.substring(6, 10);
+
+    e.target.value = formatted;
+  });
+
+  // FORM SUBMIT HANDLER
+  const form = document.getElementById("contactForm");
+  const confirmation = document.getElementById("confirmationMessage");
+
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
     });
-  </script>
+
+    if (response.ok) {
+      alert("Request Sent!");
+      form.reset();
+      confirmation.style.display = "block";
+      Array.from(form.elements).forEach(el => el.disabled = true);
+    } else {
+      alert("There was an issue sending your request. Please try again.");
+    }
+  });
+</script>
 
 </body>
 </html>
