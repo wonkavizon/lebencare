@@ -104,14 +104,6 @@
       margin: auto;
     }
 
-    .service-grid-bottom {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 25px;
-    }
-
-    /* UNIFORM SERVICE BOX HEIGHT + FLEX LAYOUT */
     .service-box,
     .service-box-bottom {
       background: #ffffff;
@@ -120,48 +112,35 @@
       border-radius: 10px;
       text-align: center;
       font-weight: bold;
-
-      height: 300px; /* uniform height */
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-    }
-
-    .service-box h3,
-    .service-box-bottom h3 {
-      margin: 0;
-      padding: 0;
+      min-height: 150px;
     }
 
     .maroon-line {
       width: 60%;
       height: 2px;
       background: #800000;
-      margin: 10px auto;
+      margin: 10px auto 15px auto;
     }
 
     .service-box ul,
     .service-box-bottom ul {
       list-style: none;
       padding: 0;
-      margin: 10px 0;
+      margin: 0;
       font-weight: normal;
       font-size: 16px;
       line-height: 1.5;
-      flex-grow: 1; /* pushes Learn More button to bottom */
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      text-align: center;
     }
 
     .service-box ul li,
     .service-box-bottom ul li {
-      margin: 4px 0;
+      margin: 6px 0;
     }
 
     .learn-more-btn {
-      margin-top: auto;
+      display: inline-block;
+      margin-top: 15px;
       padding: 6px 14px;
       border: 2px solid grey;
       color: grey;
@@ -170,6 +149,13 @@
       font-size: 14px;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .service-grid-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 25px;
     }
 
     /* CONTACT SECTION */
@@ -327,7 +313,6 @@
     <h2>Our Services</h2>
 
     <div class="service-grid">
-      <!-- BOX 1 -->
       <div class="service-box">
         <h3>Telehealth Across Florida</h3>
         <p>(No insurance required)</p>
@@ -340,7 +325,6 @@
         <a href="services.html#telehealth" class="learn-more-btn">Learn More</a>
       </div>
 
-      <!-- BOX 2 -->
       <div class="service-box">
         <h3>Self-Employee Primary Care Membership</h3>
         <div class="maroon-line"></div>
@@ -352,7 +336,6 @@
         <a href="services.html#membership" class="learn-more-btn">Learn More</a>
       </div>
 
-      <!-- BOX 3 -->
       <div class="service-box">
         <h3>Direct Primary Care Model</h3>
         <div class="maroon-line"></div>
@@ -364,9 +347,7 @@
       </div>
     </div>
 
-    <!-- BOTTOM ROW -->
     <div class="service-grid-bottom">
-      <!-- BOX 4 -->
       <div class="service-box-bottom">
         <h3>Corporate Wellness</h3>
         <div class="maroon-line"></div>
@@ -378,7 +359,6 @@
         <a href="services.html#corporate" class="learn-more-btn">Learn More</a>
       </div>
 
-      <!-- BOX 5 -->
       <div class="service-box-bottom">
         <h3>In-Office Services</h3>
         <div class="maroon-line"></div>
