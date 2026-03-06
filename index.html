@@ -21,7 +21,7 @@
       justify-content: space-between;
       align-items: center;
 
-      /* FIX: Reduce padding to give nav more room */
+      /* Reduced padding to give nav more room */
       padding: 10px 5px;
 
       border-bottom: 2px solid #dcdcdc;
@@ -46,14 +46,11 @@
       height: 120px;
     }
 
-    /* FIX: Keep everything on one line, no clipping */
+    /* FIX: Reduce nav font size to prevent clipping */
     .banner-right {
       display: flex;
       align-items: center;
-
-      /* Reduced gap to ensure fit */
       gap: 10px;
-
       white-space: nowrap;
       flex-shrink: 0;
     }
@@ -61,7 +58,10 @@
     .banner-right a {
       color: #0d2a57;
       font-weight: bold;
-      font-size: 20px;
+
+      /* Reduced from 20px → 18px */
+      font-size: 18px;
+
       text-decoration: none;
     }
 
