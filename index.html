@@ -12,6 +12,7 @@
       font-family: Arial, sans-serif;
       color: #333;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     /* FIXED Banner */
@@ -89,6 +90,7 @@
       background: #0d2a57;
       color: white;
       padding: 50px 20px;
+      overflow-x: hidden;
     }
 
     h2 {
@@ -315,6 +317,15 @@
     /* --------------------------------------------- */
     @media (max-width: 768px) {
 
+      body {
+        padding-top: 180px;
+        overflow-x: hidden;
+      }
+
+      html {
+        overflow-x: hidden;
+      }
+
       /* Fix banner scaling */
       .banner {
         flex-direction: column;
@@ -347,6 +358,8 @@
       .service-grid {
         grid-template-columns: 1fr;
         gap: 25px;
+        width: 100%;
+        margin: 0 auto;
       }
 
       /* Row 3 becomes vertical */
@@ -354,12 +367,19 @@
         flex-direction: column;
         align-items: center;
         gap: 25px;
+        width: 100%;
       }
 
       /* Make boxes full width */
       .service-box {
         max-width: 100%;
         width: 100%;
+      }
+
+      /* Fix blue background padding */
+      .content-area {
+        padding-left: 10px;
+        padding-right: 10px;
       }
 
       /* Contact form width */
@@ -583,16 +603,4 @@
     if (x.length >= 4) formatted += ") " + x.substring(3, 6);
     if (x.length >= 7) formatted += "-" + x.substring(6, 10);
 
-    e.target.value = formatted;
-  });
-
-  // FORM SUBMIT HANDLER
-  const form = document.getElementById("contactForm");
-  const confirmation = document.getElementById("confirmationMessage");
-
-  form.addEventListener("submit", async function(event) {
-    event.preventDefault();
-
-    const selected = Array.from(document.querySelectorAll(".serviceBox"))
-      .filter(box => box.checked)
-      .map(box => 
+    
