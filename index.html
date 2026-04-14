@@ -110,11 +110,15 @@
       gap: 50px;
       max-width: 1000px;
       margin: auto;
+
+      /* NEW: force boxes to center */
+      justify-items: center;
     }
 
     .service-grid-row3 {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 50px;
       margin-top: 40px;
     }
@@ -137,6 +141,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
+
+      /* NEW: ensure box itself is centered */
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .service-box:hover {
@@ -580,7 +588,7 @@
 
     <button type="submit">Request Appointment</button>
   </form>
-
+ 
   <div id="confirmationMessage">Your request has been sent.</div>
 </div>
 
