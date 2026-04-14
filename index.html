@@ -309,6 +309,68 @@
       font-size: 14px;
       color: #ffffffcc;
     }
+
+    /* --------------------------------------------- */
+    /* MOBILE RESPONSIVE FIXES */
+    /* --------------------------------------------- */
+    @media (max-width: 768px) {
+
+      /* Fix banner scaling */
+      .banner {
+        flex-direction: column;
+        padding: 8px 0;
+      }
+
+      .banner-left {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .banner-left img {
+        height: 45px;
+      }
+
+      .logo-secondary {
+        height: 80px !important;
+      }
+
+      .banner-right {
+        margin-top: 8px;
+        gap: 12px;
+      }
+
+      .banner-right a {
+        font-size: 18px;
+      }
+
+      /* Collapse service grid */
+      .service-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      /* Row 3 becomes vertical */
+      .service-grid-row3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+
+      /* Make boxes full width */
+      .service-box {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      /* Contact form width */
+      form {
+        width: 90%;
+      }
+
+      table td {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 
@@ -533,29 +595,4 @@
 
     const selected = Array.from(document.querySelectorAll(".serviceBox"))
       .filter(box => box.checked)
-      .map(box => box.value);
-
-    document.getElementById("selectedServicesField").value =
-      selected.length > 0 ? selected.join(", ") : "No service selected";
-
-    const formData = new FormData(form);
-
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { "Accept": "application/json" }
-    });
-
-    if (response.ok) {
-      alert("Request Sent!");
-      form.reset();
-      confirmation.style.display = "block";
-      Array.from(form.elements).forEach(el => el.disabled = true);
-    } else {
-      alert("There was an issue sending your request. Please try again.");
-    }
-  });
-</script>
-
-</body>
-</html>
+      .map(box => 
