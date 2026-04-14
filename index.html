@@ -50,9 +50,8 @@
       white-space: nowrap;
     }
 
-    /* BLUE TEXT + DARK MAROON HOVER */
     .banner-right a {
-      color: #0d2a57; /* Blue */
+      color: #0d2a57;
       font-weight: bold;
       font-size: 20px;
       text-decoration: none;
@@ -60,7 +59,7 @@
     }
 
     .banner-right a:hover {
-      color: #800000; /* Dark maroon hover */
+      color: #800000;
     }
 
     /* Mission Section */
@@ -102,7 +101,7 @@
       margin-bottom: 25px;
     }
 
-    /* UPDATED SPACING BETWEEN FIRST 3 BOXES */
+    /* GRID LAYOUT */
     .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -111,16 +110,15 @@
       margin: auto;
     }
 
-    .service-grid-bottom {
+    .service-grid-row3 {
       display: flex;
       justify-content: center;
-      gap: 25px;
-      margin-top: 25px;
+      gap: 50px;
+      margin-top: 40px;
     }
 
-    /* BOX STYLING + PREMIUM HOVER EFFECTS */
-    .service-box,
-    .service-box-bottom {
+    /* BOX STYLING */
+    .service-box {
       background: #ffffff;
       color: #0d2a57;
       padding: 20px;
@@ -131,15 +129,10 @@
       width: 100%;
       max-width: 300px;
       border: 2px solid transparent;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background-color 0.25s ease,
-        border-color 0.25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
     }
 
-    .service-box:hover,
-    .service-box-bottom:hover {
+    .service-box:hover {
       transform: translateY(-8px);
       background-color: #f9f4f4;
       border-color: #800000;
@@ -153,8 +146,7 @@
       margin: 10px auto 15px auto;
     }
 
-    .service-box ul,
-    .service-box-bottom ul {
+    .service-box ul {
       list-style: none;
       padding: 0;
       margin: 0;
@@ -164,8 +156,7 @@
       text-align: center;
     }
 
-    .service-box ul li,
-    .service-box-bottom ul li {
+    .service-box ul li {
       margin: 6px 0;
     }
 
@@ -188,12 +179,6 @@
       background: #0d2a57;
       color: white;
       border-color: #0d2a57;
-    }
-
-    .learn-more-btn:active {
-      background: #143b7d;
-      border-color: #143b7d;
-      color: white;
     }
 
     /* CONTACT SECTION */
@@ -252,7 +237,6 @@
       width: 40px;
     }
 
-    /* DISCLAIMER TEXT */
     .disclaimer {
       font-size: 13px;
       color: black;
@@ -358,64 +342,103 @@
   <section id="services">
     <h2>Our Services</h2>
 
+    <!-- ROW 1 -->
     <div class="service-grid">
       <div class="service-box">
-        <h3>Telehealth Across Florida</h3>
-        <p>(No insurance required)</p>
+        <h3>Telehealth Visits</h3>
         <div class="maroon-line"></div>
         <ul>
-          <li>Sick Visits (Minor Infections)</li>
-          <li>Weight Loss</li>
-          <li>Medication Refills</li>
+          <li>Convenient virtual care</li>
+          <li>Wellness & preventive visits</li>
+          <li>Medication management</li>
         </ul>
         <a href="services.html#telehealth" class="learn-more-btn">Learn More</a>
       </div>
 
       <div class="service-box">
-        <h3>Self-Employee Primary Care Membership</h3>
+        <h3>Weight Loss Management</h3>
         <div class="maroon-line"></div>
         <ul>
-          <li>Self Employee Business Owner</li>
-          <li>Freelancer</li>
-          <li>Contractor</li>
+          <li>Personalized plans</li>
+          <li>Medical support</li>
+          <li>Ongoing monitoring</li>
         </ul>
-        <a href="services.html#membership" class="learn-more-btn">Learn More</a>
+        <a href="services.html#weightloss" class="learn-more-btn">Learn More</a>
       </div>
 
       <div class="service-box">
-        <h3>Direct Primary Care Model</h3>
+        <h3>Aesthetic Services</h3>
         <div class="maroon-line"></div>
         <ul>
-          <li>Flexible Access</li>
-          <li>Health Care & Preventions</li>
+          <li>Neurotoxin treatments</li>
+          <li>Natural results</li>
+          <li>Minimally invasive</li>
+        </ul>
+        <a href="services.html#aesthetics" class="learn-more-btn">Learn More</a>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="service-grid" style="margin-top:50px;">
+      <div class="service-box">
+        <h3>Corporate Wellness</h3>
+        <div class="maroon-line"></div>
+        <ul>
+          <li>Employee health support</li>
+          <li>Wellness screenings</li>
+          <li>On-site or telehealth</li>
+        </ul>
+        <a href="services.html#corporate" class="learn-more-btn">Learn More</a>
+      </div>
+
+      <div class="service-box">
+        <h3>Weight Loss Program</h3>
+        <div class="maroon-line"></div>
+        <ul>
+          <li>$150 per month</li>
+          <li>Medical oversight</li>
+          <li>Metabolic support</li>
+        </ul>
+        <a href="services.html#weightlossprogram" class="learn-more-btn">Learn More</a>
+      </div>
+
+      <div class="service-box">
+        <h3>Direct Primary Care (DPC)</h3>
+        <div class="maroon-line"></div>
+        <ul>
+          <li>No insurance barriers</li>
+          <li>Flat monthly fee</li>
+          <li>Preventive care included</li>
         </ul>
         <a href="services.html#dpc" class="learn-more-btn">Learn More</a>
       </div>
     </div>
 
-    <div class="service-grid-bottom">
-      <div class="service-box-bottom">
-        <h3>Corporate Wellness</h3>
+    <!-- ROW 3 (centered) -->
+    <div class="service-grid-row3">
+      <div class="service-box">
+        <h3>Primary Care Membership</h3>
         <div class="maroon-line"></div>
         <ul>
-          <li>Health Coach</li>
-          <li>Pre-employment Physicals</li>
-          <li>Chronic Care Management</li>
+          <li>$95 monthly</li>
+          <li>Extended visits</li>
+          <li>Direct provider access</li>
         </ul>
-        <a href="services.html#corporate" class="learn-more-btn">Learn More</a>
+        <a href="services.html#membership" class="learn-more-btn">Learn More</a>
       </div>
 
-      <div class="service-box-bottom">
-        <h3>In-Office Services</h3>
+      <div class="service-box">
+        <h3>Non‑DPC Services</h3>
         <div class="maroon-line"></div>
         <ul>
-          <li>Primary Care - Routine Visits and Labs</li>
-          <li>IV Therapy & Injections</li>
-          <li>Aesthetic Wellness</li>
+          <li>Consultations</li>
+          <li>Lab reviews</li>
+          <li>Sick visits</li>
         </ul>
-        <a href="services.html#office" class="learn-more-btn">Learn More</a>
+        <a href="services.html#nondpc" class="learn-more-btn">Learn More</a>
       </div>
     </div>
+
   </section>
 </div>
 
@@ -450,26 +473,14 @@
     </div>
 
     <table>
-      <tr>
-        <td>Telehealth Across Florida</td>
-        <td><input type="checkbox" class="serviceBox" value="Telehealth Across Florida"></td>
-      </tr>
-      <tr>
-        <td>Self-Employee Primary Care Membership</td>
-        <td><input type="checkbox" class="serviceBox" value="Self-Employee Primary Care Membership"></td>
-      </tr>
-      <tr>
-        <td>Direct Primary Care Model</td>
-        <td><input type="checkbox" class="serviceBox" value="Direct Primary Care Model"></td>
-      </tr>
-      <tr>
-        <td>Corporate Wellness</td>
-        <td><input type="checkbox" class="serviceBox" value="Corporate Wellness"></td>
-      </tr>
-      <tr>
-        <td>In-Office Services</td>
-        <td><input type="checkbox" class="serviceBox" value="In-Office Services"></td>
-      </tr>
+      <tr><td>Telehealth Visits</td><td><input type="checkbox" class="serviceBox" value="Telehealth Visits"></td></tr>
+      <tr><td>Weight Loss Management</td><td><input type="checkbox" class="serviceBox" value="Weight Loss Management"></td></tr>
+      <tr><td>Aesthetic Services</td><td><input type="checkbox" class="serviceBox" value="Aesthetic Services"></td></tr>
+      <tr><td>Corporate Wellness</td><td><input type="checkbox" class="serviceBox" value="Corporate Wellness"></td></tr>
+      <tr><td>Weight Loss Program</td><td><input type="checkbox" class="serviceBox" value="Weight Loss Program"></td></tr>
+      <tr><td>Direct Primary Care (DPC)</td><td><input type="checkbox" class="serviceBox" value="Direct Primary Care (DPC)"></td></tr>
+      <tr><td>Primary Care Membership</td><td><input type="checkbox" class="serviceBox" value="Primary Care Membership"></td></tr>
+      <tr><td>Non‑DPC Services</td><td><input type="checkbox" class="serviceBox" value="Non‑DPC Services"></td></tr>
     </table>
 
     <button type="submit">Request Appointment</button>
