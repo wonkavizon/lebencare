@@ -82,6 +82,60 @@
 </head>
 
 <body>
+   /* --------------------------------------------- */
+    /* MOBILE RESPONSIVE FIXES */
+    /* --------------------------------------------- */
+    @media (max-width: 768px) {
+
+      body {
+        padding-top: 180px;
+        overflow-x: hidden;
+      }
+
+      html {
+        overflow-x: hidden;
+      }
+
+      /* Fix banner scaling */
+      .banner {
+        flex-direction: column;
+        padding: 8px 0;
+      }
+
+      .banner-left {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .banner-left img {
+        height: 45px;
+      }
+
+      .logo-secondary {
+        height: 80px !important;
+      }
+
+      .banner-right {
+        margin-top: 8px;
+        gap: 12px;
+      }
+
+      .banner-right a {
+        font-size: 18px;
+      }
+
+      form {
+        width: 90%;
+      }
+
+      table td {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
 
   <!-- FIXED Banner -->
 <div class="banner">
