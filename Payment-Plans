@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Plans – Leben Care</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding-top: 120px;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: white;
+      overflow-x: hidden;
+    }
+
+    /* FIXED Banner */
+    .banner {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0px;
+      border-bottom: 2px solid #dcdcdc;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .banner-left {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .banner-left img {
+      height: 56px;
+    }
+
+    .logo-secondary {
+      height: 112px;
+    }
+
+    .banner-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      white-space: nowrap;
+    }
+
+    .banner-right a {
+      color: #0d2a57;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .banner-right a:hover {
+      color: #800000;
+    }
+
+    /* Page Container */
+    .content-wrapper {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0d2a57;
+      margin-bottom: 30px;
+      font-size: 36px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- FIXED BANNER -->
+  <div class="banner">
+    <div class="banner-left">
+      <img src="textlogo1.png" alt="Leben Care Logo" />
+    </div>
+
+    <div class="banner-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="payment-plans.html">Payment Plans</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+    <h1>Payment Plans</h1>
+
+    <!-- CHERRY WIDGET BEGIN -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@200..900&family=Slabo+27px:wght@200..900&family=Lato:wght@200..900&family=Raleway:wght@200..900&family=Montserrat:wght@200..900&family=Oswald:wght@200..900&family=Poppins:wght@200..900&family=Source+Sans+Pro:wght@200..900&family=PT+Sans:wght@200..900&family=Open+Sans:wght@200..900&display=swap" rel="stylesheet" />
+
+    <script>
+      (function (w, d, s, o, f, js, fjs) {
+          w[o] = w[o] || function () {
+              (w[o].q = w[o].q || []).push(arguments);
+          };
+          (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+          js.id = o;
+          js.src = f;
+          js.async = 1;
+          fjs.parentNode.insertBefore(js, fjs);
+      })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
+
+      _hw("init", {
+          debug: false,
+          variables: {
+              slug: 'leben-care-llc',
+              name: 'Leben Care, LLC', 
+              images: [37],
+              customLogo: 'https://lebencare.com/textlogo1.png',
+              defaultPurchaseAmount: 1000,
+              customImage: '', 
+              imageCategory: 'other',
+              language: 'en',
+          },
+          styles: {
+              primaryColor: '#0e2a57',
+              secondaryColor: '#0e2a5710',
+              fontFamily: 'Open Sans',
+              headerFontFamily: 'Open Sans',
+          }
+      }, ['hero','calculator','howitworks','faq']);
+    </script>
+
+    <div id="all"></div>
+    <div id="hero"></div>
+    <div id="calculator"></div>
+    <div id="howitworks"></div>
+    <div id="testimony"></div>
+    <div id="faq"></div>
+    <!-- CHERRY WIDGET END -->
+
+  </div>
+
+</body>
+</html>
